@@ -1,0 +1,18 @@
+{
+  "name": "even-anc",
+  "version": "1.0.0",
+  "description": "EVEN A&C - 会計・財務・出入国サポート | ホーチミン",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": [
+    "accounting",
+    "consulting",
+    "vietnam",
+    "hcmc"
+  ],
+  "author": "EVEN A&C",
+  "license": "MIT"
+}
