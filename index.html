@@ -341,7 +341,7 @@
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
             }
         }
-        function handleFormSubmit(event) {
+        async function handleFormSubmit(event) {
             event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
@@ -352,10 +352,32 @@
                 message: formData.get('message')
             };
             const messageDiv = document.getElementById('form-message');
-            messageDiv.style.display = 'block';
-            messageDiv.style.background = '#d4edda';
-            messageDiv.style.color = '#155724';
-            messageDiv.textContent = currentLanguage === 'ja' ? 'お問い合わせありがとうございます。確認後、ご連絡させていただきます。' : '感謝您的查詢。我們將在確認後與您聯繫。';
-            form.reset();
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+                messageDiv.style.display = 'block';
+                if (response.ok) {
+                    messageDiv.style.background = '#d4edda';
+                    messageDiv.style.color = '#155724';
+                    messageDiv.textContent = currentLanguage === 'ja' ? 'お問い合わせありがとうございます。確認後、ご連絡させていただきます。' : '感謝您的查詢。我們將在確認後與您聯繫。';
+                    form.reset();
+                } else {
+                    messageDiv.style.background = '#f8d7da';
+                    messageDiv.style.color = '#721c24';
+                    messageDiv.textContent = currentLanguage === 'ja' ? 'エラーが発生しました。もう一度お試しください。' : '發生錯誤。請重試。';
+                }
+            } catch (error) {
+                messageDiv.style.display = 'block';
+                messageDiv.style.background = '#f8d7da';
+                messageDiv.style.color = '#721c24';
+                messageDiv.textContent = currentLanguage === 'ja' ? 'エラーが発生しました。もう一度お試しください。' : '發生錯誤。請重試。';
+                console.error('Error:', error);
+            }
         }
     </script>

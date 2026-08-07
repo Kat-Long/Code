@@ -7,6 +7,9 @@
     "dev": "python -m http.server 8000",
     "start": "python -m http.server 8000"
   },
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  },
   "keywords": [
     "accounting",
     "consulting",
