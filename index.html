@@ -8,13 +8,13 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --primary: #001F3F; --accent: #FF6633; --light-bg: #eee9e5; --text-dark: #333; --text-light: #666; --white: #ffffff; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-dark); }
-        header { background: linear-gradient(135deg, var(--primary) 0%, #003d5c 100%); color: var(--white); padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
+        header { background: var(--light-bg); color: var(--primary); padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
         .header-container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem; font-weight: bold; text-decoration: none; color: var(--white); }
+        .logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.5rem; font-weight: bold; text-decoration: none; color: var(--primary); }
         .logo-image { height: 50px; width: auto; }
         .logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--accent) 0%, #ff8855 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--primary); }
         nav { display: flex; gap: 2rem; align-items: center; }
-        nav a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        nav a { color: var(--primary); text-decoration: none; transition: color 0.3s; }
         nav a:hover { color: var(--accent); }
         .lang-switch { background: var(--accent); color: var(--white); border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; }
         .hero { background: linear-gradient(135deg, var(--primary) 0%, #003d5c 50%, var(--accent) 100%); color: var(--white); padding: 6rem 1rem; text-align: center; }
