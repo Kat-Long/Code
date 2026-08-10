@@ -31,6 +31,7 @@
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
         .blog-card { background: var(--white); border-radius: 10px; overflow: hidden; border-top: 4px solid var(--accent); cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
         .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .blog-card-image { width: 100%; height: 200px; object-fit: cover; display: block; }
         .blog-card-header { background: linear-gradient(135deg, var(--primary) 0%, #003d5c 100%); color: var(--white); padding: 1.5rem; }
         .blog-card-header h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
         .blog-date { font-size: 0.85rem; opacity: 0.8; }
@@ -79,6 +80,7 @@
             <div class="blog-grid">
                 <!-- 電子インボイス規制 -->
                 <div class="blog-card" onclick="toggleDetail(this)">
+                    <img src="2026年7月電子インボイス.png" alt="電子インボイス規制" class="blog-card-image">
                     <div class="blog-card-header">
                         <h3 data-ja="2026年7月施行：電子インボイス規制の最新ポイント" data-zh="2026年7月實施：電子發票規定的最新要點">2026年7月施行：電子インボイス規制の最新ポイント</h3>
                         <div class="blog-date">2026年7月</div>
@@ -97,6 +99,7 @@
 
                 <!-- VAT 8%と10%の判別実務 -->
                 <div class="blog-card" onclick="toggleDetail(this)">
+                    <img src="VAT判別実務.png" alt="VAT判別実務" class="blog-card-image">
                     <div class="blog-card-header">
                         <h3 data-ja="VAT 8%と10%の判別実務" data-zh="增值稅（VAT）8% 與 10% 判別實務">VAT 8%と10%の判別実務</h3>
                         <div class="blog-date">2026年4月</div>
@@ -115,6 +118,7 @@
 
                 <!-- VAT還付の遅延 -->
                 <div class="blog-card" onclick="toggleDetail(this)">
+                    <img src="VAT還付の遅延.png" alt="VAT還付の遅延" class="blog-card-image">
                     <div class="blog-card-header">
                         <h3 data-ja="VAT還付の遅延を防ぐ実務ポイント" data-zh="防止增值稅退稅延遲的實務要點">VAT還付の遅延を防ぐ実務ポイント</h3>
                         <div class="blog-date">2026年6月</div>
@@ -133,6 +137,7 @@
 
                 <!-- 仕入先のMST停止リスク -->
                 <div class="blog-card" onclick="toggleDetail(this)">
+                    <img src="仕入先MST.png" alt="仕入先MST停止リスク" class="blog-card-image">
                     <div class="blog-card-header">
                         <h3 data-ja="仕入先のMST停止リスク" data-zh="【越南稅務】供應商 MST（納稅人識別碼）停用風險">仕入先のMST停止リスク</h3>
                         <div class="blog-date">2026年3月</div>
@@ -157,6 +162,7 @@
             <div class="blog-grid">
                 <!-- 法人税未納による出国制限 -->
                 <div class="blog-card" onclick="toggleDetail(this)">
+                    <img src="法人税未納出国制限リスク.png" alt="法人税未納出国制限リスク" class="blog-card-image">
                     <div class="blog-card-header">
                         <h3 data-ja="法人税未納による出国制限リスク" data-zh="法人稅未繳導致的出國禁止風險">法人税未納による出国制限リスク</h3>
                         <div class="blog-date">2026年5月</div>
@@ -181,6 +187,7 @@
             <div class="blog-grid">
                 <!-- 運転免許証切替 -->
                 <div class="blog-card" onclick="toggleDetail(this)">
+                    <img src="日本運転免許証ベトナム切替手続き.png" alt="日本運転免許証ベトナム切替手続き" class="blog-card-image">
                     <div class="blog-card-header">
                         <h3 data-ja="日本の運転免許証からベトナム免許への切替手続き" data-zh="日本駕駛執照轉換為越南駕駛執照的程序">日本の運転免許証からベトナム免許への切替手続き</h3>
                         <div class="blog-date">2026年2月</div>
