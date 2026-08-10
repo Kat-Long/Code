@@ -38,7 +38,7 @@
         .blog-card-body { padding: 1.5rem; }
         .blog-catchcopy { color: var(--accent); font-weight: 600; font-size: 0.95rem; margin-bottom: 1rem; }
         .blog-excerpt { color: var(--text-light); margin-bottom: 1rem; }
-        .blog-read-more { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .blog-read-more { color: var(--accent); text-decoration: none; font-weight: 600; cursor: pointer; }
         .blog-detail { display: none; padding: 2rem; background: var(--light-bg); border-radius: 10px; margin-top: 1rem; }
         .blog-detail.active { display: block; }
         .blog-detail h4 { color: var(--primary); margin-bottom: 1rem; }
@@ -63,7 +63,7 @@
                 <a href="index.html#services">サービス</a>
                 <a href="blog.html">ブログ</a>
                 <a href="index.html#contact">お問い合わせ</a>
-                <button class="lang-switch" onclick="toggleLanguage()">華語</button>
+                <button class="lang-switch" onclick="toggleLanguage()" data-ja="華語" data-zh="繁體中文">華語</button>
             </nav>
         </div>
     </header>
@@ -73,130 +73,160 @@
         <p data-ja="EVEN A&Cの最新情報とお役立ち情報" data-zh="EVEN A&C的最新信息和有用信息">EVEN A&Cの最新情報とお役立ち情報</p>
     </section>
 
-    <div class="blog-container">
-        <!-- 税務・会計 カテゴリー -->
-        <div class="category-section">
-            <h2 class="category-title" data-ja="【税務・会計】" data-zh="【稅務・會計】">【税務・会計】</h2>
-            <div class="blog-grid">
-                <!-- 電子インボイス規制 -->
-                <div class="blog-card" onclick="toggleDetail(this)">
-                    <img src="2026年7月電子インボイス.png" alt="電子インボイス規制" class="blog-card-image">
-                    <div class="blog-card-header">
-                        <h3 data-ja="2026年7月施行：電子インボイス規制の最新ポイント" data-zh="2026年7月實施：電子發票規定的最新要點">2026年7月施行：電子インボイス規制の最新ポイント</h3>
-                        <div class="blog-date">2026年7月</div>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="blog-catchcopy" data-ja="政令254/2026/NĐ-CPが施行され、電子インボイスの運用ルールが更新されました。" data-zh="政令254/2026/NĐ-CP已實施，電子發票的運營規則已更新。">政令254/2026/NĐ-CPが施行され、電子インボイスの運用ルールが更新されました。</div>
-                        <p class="blog-excerpt" data-ja="買手情報の整合性、経費計上の前提、監査耐性など、役員・管理職が押さえるべき3つの確認観点を解説します。" data-zh="解釋購買方信息的一致性、費用計提的前提、審計耐受性等，高管應掌握的3個確認要點。">買手情報の整合性、経費計上の前提、監査耐性など、役員・管理職が押さえるべき3つの確認観点を解説します。</p>
-                        <a href="#" class="blog-read-more" data-ja="続きを読む →" data-zh="繼續閱讀 →">続きを読む →</a>
-                    </div>
-                    <div class="blog-detail">
-                        <h4 data-ja="詳細" data-zh="詳細">詳細</h4>
-                        <p data-ja="政令254/2026/NĐ-CPが施行され、電子インボイスの運用ルールが更新されました。買手情報の整合性、経費計上の前提、監査耐性など、役員・管理職が押さえるべき3つの確認観点を解説します。" data-zh="政令254/2026/NĐ-CP已實施，電子發票的運營規則已更新。解釋購買方信息的一致性、費用計提的前提、審計耐受性等，高管應掌握的3個確認要點。">政令254/2026/NĐ-CPが施行され、電子インボイスの運用ルールが更新されました。買手情報の整合性、経費計上の前提、監査耐性など、役員・管理職が押さえるべき3つの確認観点を解説します。</p>
-                        <button class="close-detail" onclick="closeDetail(event)">閉じる</button>
-                    </div>
-                </div>
+    <div class="blog-container" id="blog-content">
+        <!-- ブログ記事は JavaScript で動的に生成されます -->
+    </div>
 
-                <!-- VAT 8%と10%の判別実務 -->
-                <div class="blog-card" onclick="toggleDetail(this)">
-                    <img src="VAT判別実務.png" alt="VAT判別実務" class="blog-card-image">
-                    <div class="blog-card-header">
-                        <h3 data-ja="VAT 8%と10%の判別実務" data-zh="增值稅（VAT）8% 與 10% 判別實務">VAT 8%と10%の判別実務</h3>
-                        <div class="blog-date">2026年4月</div>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="blog-catchcopy" data-ja="ベトナムVAT 8% vs 10% どっちを適用？判別ミスと追徴リスクを防ぐポイント" data-zh="越南增值稅 8% vs 10% 應適用哪一個？防止判別錯誤和追徵風險的要點">ベトナムVAT 8% vs 10% どっちを適用？判別ミスと追徴リスクを防ぐポイント</div>
-                        <p class="blog-excerpt" data-ja="ベトナムの消費刺激策により、VAT税率が10%から8%へ引き下げられています。しかし、すべての品目が対象ではありません。税率誤用による控除否認を防ぐための判別ポイントと、インボイス発行時の注意点を解説します。" data-zh="在越南，政府為了刺激消費，持續實施將增值稅（VAT）稅率從 10% 降至 8% 的減免措施。但是，並非所有項目都適用 8% 的減稅優惠。本文將為您解析判別的關鍵要點，協助您避免因稅率誤用而導致扣抵被否認。">ベトナムの消費刺激策により、VAT税率が10%から8%へ引き下げられています。しかし、すべての品目が対象ではありません。税率誤用による控除否認を防ぐための判別ポイントと、インボイス発行時の注意点を解説します。</p>
-                        <a href="#" class="blog-read-more" data-ja="続きを読む →" data-zh="繼續閱讀 →">続きを読む →</a>
-                    </div>
-                    <div class="blog-detail">
-                        <h4 data-ja="詳細" data-zh="詳細">詳細</h4>
-                        <p data-ja="在越南，政府為了刺激消費，持續實施將增值稅（VAT）稅率從 10% 降至 8% 的減免措施。但是，並非所有項目都適用 8% 的減稅優惠。因此，在實務操作中，稅率適用錯誤的情況屢見不鮮。於是，本文將為您解析判別的關鍵要點，協助您避免因稅率誤用而導致扣抵被否認。" data-zh="在越南，政府為了刺激消費，持續實施將增值稅（VAT）稅率從 10% 降至 8% 的減免措施。但是，並非所有項目都適用 8% 的減稅優惠。因此，在實務操作中，稅率適用錯誤的情況屢見不鮮。於是，本文將為您解析判別的關鍵要點，協助您避免因稅率誤用而導致扣抵被否認。">在越南，政府為了刺激消費，持續實施將增值稅（VAT）稅率從 10% 降至 8% 的減免措施。但是，並非所有項目都適用 8% 的減稅優惠。因此，在實務操作中，稅率適用錯誤的情況屢見不鮮。於是，本文將為您解析判別的關鍵要點，協助您避免因稅率誤用而導致扣抵被否認。</p>
-                        <button class="close-detail" onclick="closeDetail(event)">閉じる</button>
-                    </div>
-                </div>
-
-                <!-- VAT還付の遅延 -->
-                <div class="blog-card" onclick="toggleDetail(this)">
-                    <img src="VAT還付の遅延.png" alt="VAT還付の遅延" class="blog-card-image">
-                    <div class="blog-card-header">
-                        <h3 data-ja="VAT還付の遅延を防ぐ実務ポイント" data-zh="防止增值稅退稅延遲的實務要點">VAT還付の遅延を防ぐ実務ポイント</h3>
-                        <div class="blog-date">2026年6月</div>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="blog-catchcopy" data-ja="還付の遅延を防ぐ 2026年版 実務のポイント" data-zh="防止退稅延遲 2026年版 實務要點">還付の遅延を防ぐ 2026年版 実務のポイント</div>
-                        <p class="blog-excerpt" data-ja="VAT還付申請が遅延・否認される主な原因と、事前に確認すべき実務ポイントを解説。電子インボイスのデータ不整合、非現金決済要件の不備、仕入先の税務不備など、リスク回避のための3つのチェックリストを提供します。" data-zh="解釋增值稅退稅申請延遲・否認的主要原因，以及應事先確認的實務要點。電子發票數據不一致、非現金支付要求不完備、供應商稅務不完備等，提供3個風險規避檢查清單。">VAT還付申請が遅延・否認される主な原因と、事前に確認すべき実務ポイントを解説。電子インボイスのデータ不整合、非現金決済要件の不備、仕入先の税務不備など、リスク回避のための3つのチェックリストを提供します。</p>
-                        <a href="#" class="blog-read-more" data-ja="続きを読む →" data-zh="繼續閱讀 →">続きを読む →</a>
-                    </div>
-                    <div class="blog-detail">
-                        <h4 data-ja="詳細" data-zh="詳細">詳細</h4>
-                        <p data-ja="VAT還付申請が遅延・否認される主な原因と、事前に確認すべき実務ポイントを解説。電子インボイスのデータ不整合、非現金決済要件の不備、仕入先の税務不備など、リスク回避のための3つのチェックリストを提供します。" data-zh="解釋增值稅退稅申請延遲・否認的主要原因，以及應事先確認的實務要點。電子發票數據不一致、非現金支付要求不完備、供應商稅務不完備等，提供3個風險規避檢查清單。">VAT還付申請が遅延・否認される主な原因と、事前に確認すべき実務ポイントを解説。電子インボイスのデータ不整合、非現金決済要件の不備、仕入先の税務不備など、リスク回避のための3つのチェックリストを提供します。</p>
-                        <button class="close-detail" onclick="closeDetail(event)">閉じる</button>
-                    </div>
-                </div>
-
-                <!-- 仕入先のMST停止リスク -->
-                <div class="blog-card" onclick="toggleDetail(this)">
-                    <img src="仕入先MST.png" alt="仕入先MST停止リスク" class="blog-card-image">
-                    <div class="blog-card-header">
-                        <h3 data-ja="仕入先のMST停止リスク" data-zh="【越南稅務】供應商 MST（納稅人識別碼）停用風險">仕入先のMST停止リスク</h3>
-                        <div class="blog-date">2026年3月</div>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="blog-catchcopy" data-ja="仕入先のMST（納税者番号）停止リスク：VAT控除否認を防ぐ実務対応" data-zh="供應商 MST（納稅人識別碼）停用風險：防止增值稅控除否認的實務對應">仕入先のMST（納税者番号）停止リスク：VAT控除否認を防ぐ実務対応</div>
-                        <p class="blog-excerpt" data-ja="仕入先のMST（納税者番号）が停止していると、自社のVAT控除が否認される可能性があります。仕入先の税務ステータス確認の重要性と、税務調査で追徴課税を受けるメカニズムを解説。リスク回避のための3つの実務対策を提供します。" data-zh="在越南經營事業時，確認供應商的稅務狀態是非常重要的一環。因為，一旦供應商的 MST（納稅人識別碼）遭到停用，貴公司將面臨巨大的稅務風險。本文將解析供應商 MST 停用對貴公司造成的影響，並提供相應的避險策略。">仕入先のMST（納税者番号）が停止していると、自社のVAT控除が否認される可能性があります。仕入先の税務ステータス確認の重要性と、税務調査で追徴課税を受けるメカニズムを解説。リスク回避のための3つの実務対策を提供します。</p>
-                        <a href="#" class="blog-read-more" data-ja="続きを読む →" data-zh="繼續閱讀 →">続きを読む →</a>
-                    </div>
-                    <div class="blog-detail">
-                        <h4 data-ja="詳細" data-zh="詳細">詳細</h4>
-                        <p data-ja="在越南經營事業時，確認供應商的稅務狀態是非常重要的一環。因為，一旦供應商的 MST（納稅人識別碼）遭到停用，貴公司將面臨巨大的稅務風險。本文將解析供應商 MST 停用對貴公司造成的影響，並提供相應的避險策略。" data-zh="在越南經營事業時，確認供應商的稅務狀態是非常重要的一環。因為，一旦供應商的 MST（納稅人識別碼）遭到停用，貴公司將面臨巨大的稅務風險。本文將解析供應商 MST 停用對貴公司造成的影響，並提供相應的避險策略。">在越南經營事業時，確認供應商的稅務狀態是非常重要的一環。因為，一旦供應商的 MST（納稅人識別碼）遭到停用，貴公司將面臨巨大的稅務風險。本文將解析供應商 MST 停用對貴公司造成的影響，並提供相應的避險策略。</p>
-                        <button class="close-detail" onclick="closeDetail(event)">閉じる</button>
-                    </div>
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 data-ja="サービス" data-zh="服務">サービス</h4>
+                <a href="index.html#services">税務申告サポート</a>
+                <a href="index.html#services">出国停止解除</a>
+                <a href="index.html#services">会計代行</a>
+            </div>
+            <div class="footer-section">
+                <h4 data-ja="情報" data-zh="信息">情報</h4>
+                <a href="blog.html">ブログ</a>
+                <a href="index.html#threads">Threads</a>
+                <a href="index.html#contact">お問い合わせ</a>
+            </div>
+            <div class="footer-section">
+                <h4 data-ja="会社情報" data-zh="公司信息">会社情報</h4>
+                <a href="index.html#company-info">住所</a>
+                <a href="index.html#company-info">営業時間</a>
+                <a href="index.html#company-info">連絡先</a>
             </div>
         </div>
-
-        <!-- 出国制限 カテゴリー -->
-        <div class="category-section">
-            <h2 class="category-title" data-ja="【出国制限】" data-zh="【出國限制】">【出国制限】</h2>
-            <div class="blog-grid">
-                <!-- 法人税未納による出国制限 -->
-                <div class="blog-card" onclick="toggleDetail(this)">
-                    <img src="法人税未納出国制限リスク.png" alt="法人税未納出国制限リスク" class="blog-card-image">
-                    <div class="blog-card-header">
-                        <h3 data-ja="法人税未納による出国制限リスク" data-zh="法人稅未繳導致的出國禁止風險">法人税未納による出国制限リスク</h3>
-                        <div class="blog-date">2026年5月</div>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="blog-catchcopy" data-ja="法人税未納による渡航制限解除手続き" data-zh="法人稅未繳導致的出國禁止解除手續">法人税未納による渡航制限解除手続き</div>
-                        <p class="blog-excerpt" data-ja="税務未納が5億ドン以上に達すると、出国制限措置が取られます。事業責任者が空港で足止めされるリスクと、制限解除までの手続きを詳しく解説。未納状況の定期確認と事前対策の重要性を強調します。" data-zh="當稅務未繳達到5億越南盾以上時，將採取出國限制措施。詳細解釋事業責任人在機場被扣留的風險和解除限制的程序。強調定期確認未繳狀況和事前對策的重要性。">税務未納が5億ドン以上に達すると、出国制限措置が取られます。事業責任者が空港で足止めされるリスクと、制限解除までの手続きを詳しく解説。未納状況の定期確認と事前対策の重要性を強調します。</p>
-                        <a href="#" class="blog-read-more" data-ja="続きを読む →" data-zh="繼續閱讀 →">続きを読む →</a>
-                    </div>
-                    <div class="blog-detail">
-                        <h4 data-ja="詳細" data-zh="詳細">詳細</h4>
-                        <p data-ja="税務未納が5億ドン以上に達すると、出国制限措置が取られます。事業責任者が空港で足止めされるリスクと、制限解除までの手続きを詳しく解説。未納状況の定期確認と事前対策の重要性を強調します。" data-zh="當稅務未繳達到5億越南盾以上時，將採取出國限制措施。詳細解釋事業責任人在機場被扣留的風險和解除限制的程序。強調定期確認未繳狀況和事前對策的重要性。">税務未納が5億ドン以上に達すると、出国制限措置が取られます。事業責任者が空港で足止めされるリスクと、制限解除までの手続きを詳しく解説。未納状況の定期確認と事前対策の重要性を強調します。</p>
-                        <button class="close-detail" onclick="closeDetail(event)">閉じる</button>
-                    </div>
-                </div>
-            </div>
+        <div class="footer-bottom">
+            <p>© 2026 EVEN A&C. All rights reserved.</p>
         </div>
+    </footer>
 
-        <!-- その他 カテゴリー -->
-        <div class="category-section">
-            <h2 class="category-title" data-ja="【その他】" data-zh="【其他】">【その他】</h2>
-            <div class="blog-grid">
-                <!-- 運転免許証切替 -->
-                <div class="blog-card" onclick="toggleDetail(this)">
-                    <img src="日本運転免許証ベトナム切替手続き.png" alt="日本運転免許証ベトナム切替手続き" class="blog-card-image">
-                    <div class="blog-card-header">
-                        <h3 data-ja="日本の運転免許証からベトナム免許への切替手続き" data-zh="日本駕駛執照轉換為越南駕駛執照的程序">日本の運転免許証からベトナム免許への切替手続き</h3>
-                        <div class="blog-date">2026年2月</div>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="blog-catchcopy" data-ja="日本人ベトナム生活をサポート！切替申請のポイント" data-zh="日本人越南生活支援！切替申請的要點">日本人ベトナム生活をサポート！切替申請のポイント</div>
-                        <p class="blog-excerpt" data-ja="TRC（一時滞在カード）取得者向けの、日本の運転免許証をベトナム運転免許証へ切り替える全手順を解説。2025年3月より管轄が公安省へ移管されました。最新の申請窓口、必要書類、手続きの流れを詳しく説明します。" data-zh="為TRC（臨時居住卡）持有者解釋將日本駕駛執照轉換為越南駕駛執照的全部程序。自2025年3月起，管轄權已轉移至公安部。詳細說明最新的申請窗口、所需文件和程序流程。">TRC（一時滞在カード）取得者向けの、日本の運転免許証をベトナム運転免許証へ切り替える全手順を解説。2025年3月より管轄が公安省へ移管されました。最新の申請窓口、必要書類、手続きの流れを詳しく説明します。</p>
-                        <a href="#" class="blog-read-more" data-ja="続きを読む →" data-zh="繼續閱讀 →">続きを読む →</a>
-                    </div>
-                    <div class="blog-detail">
-                        <h4 data-ja="詳細" data-zh="詳細">詳細</h4>
-                        <p data-ja="TRC（一時滞在カード）取得者向けの、日本の運転免許証をベトナム運転免許証へ切り替える全手順を解説。2025年3月より管轄が公安省へ移管されました。最新の申請窓口、必要書類、手続きの流れを詳しく説明します。" data-zh="為TRC（臨時居住卡）持有者解
+    <script>
+        let currentLanguage = 'ja';
+        let articlesData = [];
+
+        // 記事データを読み込む
+        async function loadArticles() {
+            try {
+                const response = await fetch('articles.json');
+                articlesData = await response.json();
+                renderBlog();
+            } catch (error) {
+                console.error('Error loading articles:', error);
+            }
+        }
+
+        // ブログを動的に生成
+        function renderBlog() {
+            const blogContent = document.getElementById('blog-content');
+            blogContent.innerHTML = '';
+
+            // カテゴリーごとにグループ化
+            const categories = {};
+            articlesData.articles.forEach(article => {
+                const categoryKey = currentLanguage === 'ja' ? article.category_ja : article.category_zh;
+                if (!categories[categoryKey]) {
+                    categories[categoryKey] = [];
+                }
+                categories[categoryKey].push(article);
+            });
+
+            // カテゴリーごとにセクションを作成
+            Object.keys(categories).forEach(category => {
+                const section = document.createElement('div');
+                section.className = 'category-section';
+
+                const title = document.createElement('h2');
+                title.className = 'category-title';
+                title.textContent = category;
+                section.appendChild(title);
+
+                const grid = document.createElement('div');
+                grid.className = 'blog-grid';
+
+                categories[category].forEach(article => {
+                    const card = createBlogCard(article);
+                    grid.appendChild(card);
+                });
+
+                section.appendChild(grid);
+                blogContent.appendChild(section);
+            });
+        }
+
+        // ブログカードを作成
+        function createBlogCard(article) {
+            const card = document.createElement('div');
+            card.className = 'blog-card';
+
+            const titleKey = currentLanguage === 'ja' ? 'title_ja' : 'title_zh';
+            const catchcopyKey = currentLanguage === 'ja' ? 'catchcopy_ja' : 'catchcopy_zh';
+            const excerptKey = currentLanguage === 'ja' ? 'excerpt_ja' : 'excerpt_zh';
+            const contentKey = currentLanguage === 'ja' ? 'content_ja' : 'content_zh';
+
+            const html = `
+                <img src="${article.image}" alt="${article[titleKey]}" class="blog-card-image">
+                <div class="blog-card-header">
+                    <h3>${article[titleKey]}</h3>
+                    <div class="blog-date">${article.date}</div>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-catchcopy">${article[catchcopyKey]}</div>
+                    <p class="blog-excerpt">${article[excerptKey]}</p>
+                    <a href="#" class="blog-read-more" onclick="toggleDetail(event)">${currentLanguage === 'ja' ? '続きを読む →' : '繼續閱讀 →'}</a>
+                </div>
+                <div class="blog-detail">
+                    <h4>${currentLanguage === 'ja' ? '詳細' : '詳細'}</h4>
+                    <p>${article[contentKey]}</p>
+                    <button class="close-detail" onclick="closeDetail(event)">${currentLanguage === 'ja' ? '閉じる' : '關閉'}</button>
+                </div>
+            `;
+
+            card.innerHTML = html;
+            return card;
+        }
+
+        // 詳細を表示/非表示
+        function toggleDetail(event) {
+            event.preventDefault();
+            const card = event.target.closest('.blog-card');
+            const detail = card.querySelector('.blog-detail');
+            detail.classList.add('active');
+        }
+
+        function closeDetail(event) {
+            event.preventDefault();
+            const card = event.target.closest('.blog-card');
+            const detail = card.querySelector('.blog-detail');
+            detail.classList.remove('active');
+        }
+
+        // 言語切り替え
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'ja' ? 'zh' : 'ja';
+            updateLanguage();
+            updateButtonText();
+            renderBlog();
+        }
+
+        function updateLanguage() {
+            const elements = document.querySelectorAll('[data-ja][data-zh]');
+            elements.forEach(el => {
+                const text = el.getAttribute(`data-${currentLanguage}`);
+                if (text) el.textContent = text;
+            });
+        }
+
+        function updateButtonText() {
+            const btn = document.querySelector('.lang-switch');
+            btn.textContent = currentLanguage === 'ja' ? '華語' : '日本語';
+        }
+
+        // ページ読み込み時に記事を読み込む
+        window.addEventListener('DOMContentLoaded', loadArticles);
+    </script>
+
+</body>
+</html>
