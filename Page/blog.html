@@ -123,9 +123,14 @@
             const blogContent = document.getElementById('blog-content');
             blogContent.innerHTML = '';
 
+            // 記事を日付の新しい順でソート
+            const sortedArticles = [...articlesData.articles].sort((a, b) => {
+                return new Date(b.date) - new Date(a.date);
+            });
+
             // カテゴリーごとにグループ化
             const categories = {};
-            articlesData.articles.forEach(article => {
+            sortedArticles.forEach(article => {
                 const categoryKey = currentLanguage === 'ja' ? article.category_ja : article.category_zh;
                 if (!categories[categoryKey]) {
                     categories[categoryKey] = [];
@@ -160,6 +165,7 @@
         function createBlogCard(article) {
             const card = document.createElement('div');
             card.className = 'blog-card';
+            card.dataset.articleId = article.id;
 
             const titleKey = currentLanguage === 'ja' ? 'title_ja' : 'title_zh';
             const catchcopyKey = currentLanguage === 'ja' ? 'catchcopy_ja' : 'catchcopy_zh';
@@ -192,6 +198,16 @@
         function toggleDetail(event) {
             event.preventDefault();
             const card = event.target.closest('.blog-card');
+            const articleId = parseInt(card.dataset.articleId);
+            const article = articlesData.articles.find(a => a.id === articleId);
+
+            // external_link がある場合は外部ファイルへ移動
+            if (article && article[`external_link_${currentLanguage}`]) {
+                window.open(article[`external_link_${currentLanguage}`], '_blank');
+                return;
+            }
+
+            // external_link がない場合はカード内展開
             const detail = card.querySelector('.blog-detail');
             detail.classList.add('active');
         }
