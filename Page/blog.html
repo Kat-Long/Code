@@ -191,6 +191,20 @@
             `;
 
             card.innerHTML = html;
+            // クリックイベント：カード全体をクリック可能に
+            card.addEventListener('click', function(ev) {
+                // クリックが内部のリンク/閉じるボタンから発生している場合は何もしない
+                if (ev.target.closest('.blog-read-more') || ev.target.closest('.close-detail')) return;
+                const articleId = parseInt(card.dataset.articleId, 10);
+                const ar = articlesData.articles.find(a => a.id === articleId);
+                const link = ar && ar[`external_link_${currentLanguage}`];
+                if (link) {
+                    window.open(link, '_blank');
+                } else {
+                    const detail = card.querySelector('.blog-detail');
+                    if (detail) detail.classList.add('active');
+                }
+            });
             return card;
         }
 
