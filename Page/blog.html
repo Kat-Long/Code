@@ -139,7 +139,15 @@
             });
 
             // カテゴリーごとにセクションを作成
-            Object.keys(categories).forEach(category => {
+            // 「その他／其他」は常に一覧の最下部に表示する
+            const categoryOrder = Object.keys(categories).sort((a, b) => {
+                const isOtherA = a === '【その他】' || a === '【其他】';
+                const isOtherB = b === '【その他】' || b === '【其他】';
+                if (isOtherA !== isOtherB) return isOtherA ? 1 : -1;
+                return 0;
+            });
+
+            categoryOrder.forEach(category => {
                 const section = document.createElement('div');
                 section.className = 'category-section';
 
