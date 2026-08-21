@@ -27,6 +27,18 @@
         .article-header { border-bottom: 4px solid #FF6633; padding-bottom: 20px; margin-bottom: 40px; }
         h1 { color: #001F3F; font-size: 2.5em; margin-bottom: 10px; }
         .article-meta { color: #666; font-size: 0.95em; }
+        .category-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 12px; }
+        .category-links a {
+            display: inline-block;
+            padding: 0.2rem 0.7rem;
+            border: 1px solid rgba(255, 102, 51, 0.45);
+            border-radius: 999px;
+            color: #FF6633;
+            font-size: 0.85rem;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+        .category-links a:hover { background: #FF6633; color: #fff; }
         h2 { color: #001F3F; font-size: 1.8em; margin-top: 40px; margin-bottom: 20px; padding-left: 15px; border-left: 5px solid #FF6633; }
         h3 { color: #FF6633; font-size: 1.3em; margin-top: 25px; margin-bottom: 15px; }
         .highlight { background-color: #eee9e5; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #FF6633; }
@@ -37,18 +49,43 @@
         .checklist li:before { content: "✓ "; color: #FF6633; font-weight: bold; margin-right: 10px; }
         .warning { background-color: #fff3cd; padding: 15px; border-radius: 5px; border-left: 4px solid #FF6633; margin: 20px 0; }
         .warning strong { color: #001F3F; }
+        .featured-image {
+            margin: 0 0 32px;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #eee9e5;
+            box-shadow: 0 10px 28px rgba(0, 31, 63, .12);
+        }
+        .featured-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: cover;
+        }
+        .featured-image figcaption {
+            padding: 10px 16px;
+            color: #666;
+            font-size: 0.85em;
+            text-align: center;
+        }
         .illustration { text-align: center; margin: 30px 0; padding: 20px; background-color: #eee9e5; border-radius: 8px; }
-        .illustration-caption { color: #666; font-size: 0.9em; margin-top: 10px; font-style: italic; }
+        .illustration-caption { color: #666; font-size: 0.9em; margin-top: 10px; }
+        .summary-box .preparation-emphasis { color: #FF6633; }
         strong { color: #001F3F; }
         em { color: #FF6633; }
         .summary-box { background: linear-gradient(135deg, #001F3F 0%, #003d66 100%); color: #fff; padding: 25px; border-radius: 8px; margin: 30px 0; }
         .summary-box h3 { color: #FF6633; margin-top: 0; }
         .summary-box li { margin: 10px 0; }
         .footer-note { background-color: #eee9e5; padding: 20px; border-radius: 8px; margin-top: 40px; font-size: 0.95em; color: #666; }
+        .disclaimer { background: #fafafa; border: 1px solid #ddd; border-radius: 8px; color: #666; font-size: 0.9em; margin-top: 40px; padding: 18px 20px; }
+        .disclaimer strong { color: #001F3F; display: block; margin-bottom: 4px; }
         footer { background: #000; color: #fff; padding: 2rem 1rem; text-align: center; margin-top: 3rem; }
         .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
         .footer-section h4 { color: var(--accent); margin-bottom: 1rem; }
-        .footer-section a { color: #fff; text-decoration: none; display: block; margin-bottom: 0.5rem; }
+        .footer-section a { color: #fff; text-decoration: none; display: block; margin-bottom: 0.5rem; transition: color 0.2s ease; }
+        .footer-section a:hover { color: var(--accent); }
+        .footer-bottom { color: #aaa; font-size: 0.85rem; }
         .article-content { display: none; }
         .article-content.active { display: block; }
         @media (max-width: 768px) { nav { display: none; } h1 { font-size: 1.8em; } }
@@ -76,8 +113,18 @@
         <div class="container">
             <div class="article-header">
                 <h1>監査対応・税務調査への準備</h1>
-                <div class="article-meta"><p>公開日：2026年8月17日 | カテゴリー：【税務・会計】</p></div>
+                <div class="article-meta"><p>公開日：2026年8月17日</p></div>
+                <div class="category-links" aria-label="カテゴリー">
+                    <a href="blog.html">税務・会計</a>
+                    <a href="blog.html">税務調査</a>
+                    <a href="blog.html">監査対応</a>
+                </div>
             </div>
+
+            <figure class="featured-image">
+                <img src="監査対応・税務調査への準備.png" alt="監査対応と税務調査への準備をイメージしたイラスト" loading="lazy">
+                <figcaption>税務調査に備える書類管理と事前準備のポイント</figcaption>
+            </figure>
 
             <div class="highlight">
                 <strong>この記事のポイント</strong><br>
@@ -214,7 +261,7 @@
 
             <div class="summary-box">
                 <h3 style="margin-top: 0;">監査対応・税務調査への準備で最も大切なこと</h3>
-                <p>税務調査は<strong>「事前準備で9割が決まる」</strong>と言っても過言ではありません。</p>
+                <p>税務調査は<strong class="preparation-emphasis">「事前準備で9割が決まる」</strong>と言っても過言ではありません。</p>
                 <ul>
                     <li>日頃から帳簿を正確に記録する</li>
                     <li>書類を完全に保管する</li>
@@ -229,6 +276,11 @@
                 <p>税務調査への対応や監査準備について、ご不明な点やご心配なことがあれば、お気軽にお問い合わせください。日本人担当者が、ベトナムの税務実務に基づいた具体的なアドバイスを提供いたします。</p>
                 <p style="margin-top: 10px;">📞 078-345-0101 | 📧 お問い合わせフォームより</p>
             </div>
+
+            <div class="disclaimer" data-disclaimer>
+                <strong>免責事項</strong>
+                <span data-disclaimer-text>免責事項を読み込んでいます。</span>
+            </div>
         </div>
     </div>
 
@@ -237,8 +289,18 @@
         <div class="container">
             <div class="article-header">
                 <h1>審計對應・稅務檢查的準備</h1>
-                <div class="article-meta"><p>發佈日期：2026年8月17日 | 分類：【稅務・會計】</p></div>
+                <div class="article-meta"><p>發佈日期：2026年8月17日</p></div>
+                <div class="category-links" aria-label="分類">
+                    <a href="blog.html">稅務・會計</a>
+                    <a href="blog.html">稅務檢查</a>
+                    <a href="blog.html">審計對應</a>
+                </div>
             </div>
+
+            <figure class="featured-image">
+                <img src="監査対応・税務調査への準備.png" alt="審計對應與稅務檢查準備的插圖" loading="lazy">
+                <figcaption>稅務檢查的文件管理與事前準備重點</figcaption>
+            </figure>
 
             <div class="highlight">
                 <strong>本文章的重點</strong><br>
@@ -364,4 +426,92 @@
                 <ul style="list-style: none;">
                     <li><strong>提高月次決算的精度</strong>：每月比對帳簿和銀行帳戶</li>
                     <li><strong>電子發票的管理</strong>：按月份・交易對象分類整理開立・接收發票</li>
-                    <li><strong>薪資・社
+                    <li><strong>薪資・社會保險資料</strong>：按月整理薪資、扣繳及社會保險相關文件</li>
+                    <li><strong>稅務文件的保管</strong>：依規定保存申報資料、電子發票及付款證明</li>
+                    <li><strong>定期確認稅務狀況</strong>：及早發現差異並在稅務檢查前完成修正</li>
+                </ul>
+            </div>
+
+            <div class="disclaimer" data-disclaimer>
+                <strong>免責事項</strong>
+                <span data-disclaimer-text>免責事項を読み込んでいます。</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>EVEN A&C</h4>
+                <a href="index.html#services" data-ja="税務申告サポート" data-zh="稅務申報支援">税務申告サポート</a>
+                <a href="index.html#services" data-ja="出国停止解除サポート" data-zh="解除出國禁止支援">出国停止解除サポート</a>
+                <a href="index.html#services" data-ja="会計・財務コンサル" data-zh="會計・財務顧問">会計・財務コンサル</a>
+            </div>
+            <div class="footer-section">
+                <h4 data-ja="情報" data-zh="資訊">情報</h4>
+                <a href="blog.html" data-ja="ブログ" data-zh="部落格">ブログ</a>
+                <a href="https://www.threads.com/@even_anc.hcmc" target="_blank" rel="noopener">Threads</a>
+                <a href="index.html#contact" data-ja="お問い合わせ" data-zh="聯絡我們">お問い合わせ</a>
+                <a href="https://line.me/ti/p/aAFU5_N2Rp" target="_blank" rel="noopener">LINE</a>
+                <a href="https://zaloapp.com/qr/p/1mmw3e6j7q230" target="_blank" rel="noopener">Zalo</a>
+            </div>
+            <div class="footer-section">
+                <h4 data-ja="会社情報" data-zh="公司資訊">会社情報</h4>
+                <a href="index.html#company-info" data-ja="住所・営業時間" data-zh="地址・營業時間">住所・営業時間</a>
+                <a href="https://evenanc-p57c5c2.gamma.site/" target="_blank" rel="noopener" data-ja="会社概要" data-zh="公司概要">会社概要</a>
+                <a href="disclaimer.html" data-ja="免責事項" data-zh="免責事項">免責事項</a>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 EVEN A&C. All rights reserved.</div>
+    </footer>
+
+    <script>
+        let currentLanguage = "ja";
+        let disclaimerData = null;
+
+        function updateLanguage() {
+            document.querySelectorAll("[data-ja][data-zh]").forEach((element) => {
+                element.textContent = element.getAttribute("data-" + currentLanguage);
+            });
+            document.querySelectorAll(".article-content").forEach((article) => {
+                article.classList.toggle("active", article.dataset.lang === currentLanguage);
+            });
+            document.documentElement.lang = currentLanguage === "ja" ? "ja" : "zh-Hant";
+            document.getElementById("lang-btn-text").textContent =
+                currentLanguage === "ja" ? "華語" : "日本語";
+            updateDisclaimer();
+        }
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === "ja" ? "zh" : "ja";
+            updateLanguage();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function updateDisclaimer() {
+            if (!disclaimerData) return;
+            document.querySelectorAll("[data-disclaimer-text]").forEach((element) => {
+                element.textContent = disclaimerData[currentLanguage] || "";
+            });
+        }
+
+        async function loadDisclaimer() {
+            try {
+                const response = await fetch("disclaimer.json", { cache: "no-store" });
+                if (!response.ok) throw new Error("免責事項データの取得に失敗しました。");
+                disclaimerData = await response.json();
+                updateDisclaimer();
+            } catch (error) {
+                document.querySelectorAll("[data-disclaimer-text]").forEach((element) => {
+                    element.textContent = currentLanguage === "ja"
+                        ? "法令や税制は予告なく変更される場合があります。また、個別事案は専門家の意見を必ずご確認ください。本記事の内容を用いたことによるいかなる損害に対しても一切の責任を負いかねます。"
+                        : "本篇文章係參考撰寫當時之當地法規制度所作成，惟法令與稅制可能在未經預告之情況下有所變更。此外，針對個別具體案件之法律解釋與應對方式，請務必諮詢專業人士之意見。對於因使用本篇文章內容而造成之任何損害，本公司概不承擔任何責任。";
+                });
+            }
+        }
+
+        updateLanguage();
+        loadDisclaimer();
+    </script>
+</body>
+</html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ベトナムVAT 8%と10%の判別実務、適用対象、インボイス発行時の注意点を解説。EVEN A&Cの日本人担当者が日系企業向けにサポートします。">
+  <title>VAT 8%と10%の判別実務 | EVEN A&C</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #001F3F;
+      --primary-light: #003d66;
+      --accent: #FF6633;
+      --light-bg: #eee9e5;
+      --paper: #ffffff;
+      --page: #f9f9f9;
+      --text: #333333;
+      --muted: #666666;
+      --warning: #fff3cd;
+      --info: #f0f8ff;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--page);
+      color: var(--text);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, "Noto Sans JP", Meiryo, sans-serif;
+      line-height: 1.8;
+    }
+    a { color: var(--accent); }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--light-bg);
+      color: var(--primary);
+      padding: 1rem 0;
+      box-shadow: 0 1px 0 rgba(0, 31, 63, .08);
+    }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      color: var(--primary);
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .logo-image { width: auto; height: 48px; }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+    }
+    .site-nav a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+    .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--accent); }
+    .lang-switch {
+      border: 0;
+      border-radius: 5px;
+      padding: .55rem 1rem;
+      background: var(--accent);
+      color: #fff;
+      font: inherit;
+      cursor: pointer;
+    }
+    .article-shell {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 52px;
+      background: var(--paper);
+      min-height: calc(100vh - 100px);
+    }
+    .article-header {
+      border-bottom: 4px solid var(--accent);
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+    h1 {
+      color: var(--primary);
+      font-size: clamp(1.9rem, 4vw, 2.5rem);
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+    .article-meta {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .category-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: 12px;
+    }
+    .category-links a {
+      display: inline-block;
+      padding: .2rem .7rem;
+      border: 1px solid rgba(255, 102, 51, .45);
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: .85rem;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+    .category-links a:hover { background: var(--accent); color: #fff; }
+    .article-content { display: none; }
+    .article-content.active { display: block; }
+    .article-content p { margin: 0 0 1rem; }
+    .article-content ul, .article-content ol {
+      margin: .5rem 0 1.2rem 1.5rem;
+    }
+    .article-content li { margin: .45rem 0; }
+    h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      line-height: 1.4;
+      margin: 40px 0 20px;
+      padding-left: 15px;
+      border-left: 5px solid var(--accent);
+    }
+    h3 {
+      color: var(--accent);
+      font-size: 1.3rem;
+      line-height: 1.5;
+      margin: 25px 0 15px;
+    }
+    strong { color: var(--primary); }
+    em { color: var(--accent); font-style: normal; font-weight: 700; }
+    .highlight, .key-point, .checklist, .warning, .summary-box, .footer-note {
+      margin: 20px 0;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .highlight {
+      background: var(--light-bg);
+      border-left: 4px solid var(--accent);
+    }
+    .key-point {
+      background: #fff3e0;
+      border-left: 4px solid var(--accent);
+    }
+    .checklist { background: var(--info); }
+    .checklist ul { list-style: none; margin-left: 0; }
+    .checklist li { padding-left: 1.7rem; position: relative; }
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .warning {
+      background: var(--warning);
+      border-left: 4px solid var(--accent);
+    }
+    .summary-box {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: #fff;
+    }
+    .summary-box h3 { margin-top: 0; color: var(--accent); }
+    .summary-box strong { color: #fff; }
+    .featured-image {
+      margin: 0 0 32px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: var(--light-bg);
+      box-shadow: 0 10px 28px rgba(0, 31, 63, .12);
+    }
+    .featured-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: cover;
+    }
+    .featured-image figcaption {
+      padding: 10px 16px;
+      color: var(--muted);
+      font-size: .85rem;
+      text-align: center;
+    }
+    .illustration {
+      text-align: center;
+      margin: 30px 0;
+      padding: 22px;
+      background: var(--light-bg);
+      border-radius: 8px;
+    }
+    .illustration-icon { font-size: 3rem; color: var(--accent); line-height: 1; }
+    .illustration-caption { color: var(--muted); font-size: .9rem; margin-top: 10px; font-style: italic; }
+    .disclaimer {
+      margin-top: 40px;
+      padding: 18px 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .disclaimer strong { display: block; margin-bottom: 4px; }
+    .footer-note { background: var(--light-bg); color: var(--muted); font-size: .95rem; }
+    .footer-note strong { display: block; margin-bottom: 4px; }
+    .site-footer {
+      background: #000;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+    .footer-section h4 { color: var(--accent); margin-bottom: 1rem; }
+    .footer-section a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: .5rem;
+    }
+    .footer-section a:hover { color: var(--accent); }
+    .footer-bottom { font-size: .85rem; color: #aaa; }
+    @media (max-width: 768px) {
+      .header-container { flex-wrap: wrap; }
+      .site-nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: .6rem;
+        font-size: .9rem;
+      }
+      .logo-image { height: 42px; }
+      .article-shell { padding: 28px 16px 40px; }
+      h2 { font-size: 1.5rem; }
+      h3 { font-size: 1.15rem; }
+      .footer-content { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo" aria-label="EVEN A&C ホーム">
+        <img src="logo.png" alt="EVEN A&C" class="logo-image">
+        <span>EVEN A&C</span>
+      </a>
+      <nav class="site-nav" aria-label="サイトナビゲーション">
+        <a href="index.html#services"><span data-ja="サービス" data-zh="服務">サービス</span></a>
+        <a href="blog.html" aria-current="page"><span data-ja="ブログ" data-zh="部落格">ブログ</span></a>
+        <a href="index.html#contact"><span data-ja="お問い合わせ" data-zh="聯絡我們">お問い合わせ</span></a>
+        <button type="button" class="lang-switch" onclick="toggleLanguage()" aria-label="言語切替">
+          <span id="lang-button">華語</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article id="article-ja" class="article-content active" data-lang="ja">
+      <div class="article-shell">
+        <header class="article-header">
+          <h1>VAT 8%と10%の判別実務</h1>
+          <div class="article-meta">公開日：2026年8月21日</div>
+          <div class="category-links" aria-label="カテゴリー">
+            <a href="blog.html">税務・会計</a>
+            <a href="blog.html">VAT</a>
+            <a href="blog.html">インボイス</a>
+          </div>
+        </header>
+
+        <figure class="featured-image">
+          <img src="VAT判別実務.png" alt="VAT 8%と10%の判別実務をイメージしたイラスト" loading="lazy">
+          <figcaption>VAT税率の判定とインボイス管理のポイント</figcaption>
+        </figure>
+
+        <div class="highlight">
+          <strong>この記事のポイント</strong>
+          <p>ベトナムでは、すべての商品・サービスにVAT 8%が適用されるわけではありません。対象範囲と除外品目を正しく確認し、インボイスの誤発行や仕入VAT控除否認のリスクを防ぎましょう。</p>
+        </div>
+
+        <h2>1. VAT 8%軽減税率の基本</h2>
+        <p>ベトナムでは消費刺激策の一環として、通常10%のVAT税率が適用される一部の商品・サービスについて、8%の軽減税率が適用される場合があります。</p>
+        <p>ただし、軽減税率は一律に適用されるものではありません。対象となる事業内容、商品分類、関連する法令・政令を確認したうえで判断する必要があります。</p>
+
+        <div class="key-point">
+          <strong>重要な考え方</strong><br>
+          VAT 8%を適用できるかどうかは、取引先の認識ではなく、商品・サービスの具体的な内容と法令上の分類によって判断します。
+        </div>
+
+        <h2>2. 10%が維持される主な分野</h2>
+        <p>次のような分野は、軽減税率の対象外となり、引き続き10%が適用される可能性があります。</p>
+        <div class="checklist">
+          <ul>
+            <li>不動産事業</li>
+            <li>金融、銀行、証券、保険に関するサービス</li>
+            <li>電気通信および情報技術サービスの一部</li>
+            <li>金属製品、鉱業に関する商品・サービス</li>
+            <li>酒類、たばこ、乗用車など特別消費税の対象となる商品</li>
+          </ul>
+        </div>
+        <p>実際の適用可否は、対象期間の法令と自社の具体的な取引内容を照合して確認してください。</p>
+
+        <h2>3. 実務で判断に迷いやすいケース</h2>
+        <h3>複合サービスの取り扱い</h3>
+        <p>機器販売とシステム調整、保守、点検など、複数のサービスを一つの契約で提供する場合は注意が必要です。</p>
+        <p>8%対象の商品と10%対象のサービスが混在する場合、契約書やインボイス上で内容と金額を明確に区分できていないと、取引全体について10%が適用されるリスクがあります。</p>
+
+        <h3>商品分類・HSコードの確認</h3>
+        <p>商品については、名称だけでなく、製品の実態や商品分類、HSコードなどを確認して税率を判断します。社内で8%と判断していても、税務調査で10%対象と判断される可能性があります。</p>
+
+        <div class="illustration">
+          <div class="illustration-icon">📋</div>
+          <p class="illustration-caption">税率の判定根拠と関連資料を、取引ごとに保存しておきましょう。</p>
+        </div>
+
+        <h2>4. e-Invoice発行時の注意点</h2>
+        <h3>税率ごとに明確に区分する</h3>
+        <p>8%対象品目と10%対象品目を同時に取り扱う場合は、品目、数量、単価、税率、税額を税率ごとに明確に表示します。</p>
+        <h3>誤った税率で発行した場合</h3>
+        <p>誤った税率でインボイスを発行した場合は、取引先と連携し、取消しや修正インボイスなど、適切な手続きを速やかに行う必要があります。</p>
+
+        <div class="warning">
+          <strong>⚠️ 仕入側への影響</strong><br>
+          税率の誤適用は、仕入VATの控除や還付に影響する可能性があります。発行前の確認と、発行後の定期的な突合が重要です。
+        </div>
+
+        <h2>5. 事業者向けチェックリスト</h2>
+        <div class="checklist">
+          <ul>
+            <li>自社の商品・サービスを、税率ごとに一覧化している</li>
+            <li>VAT 8%の適用根拠となる法令・分類を確認している</li>
+            <li>8%対象と10%対象の取引を契約書で区分している</li>
+            <li>e-Invoiceの税率、税額、合計金額を発行前に確認している</li>
+            <li>発行済みインボイスと会計帳簿を定期的に突合している</li>
+            <li>税率判断に迷う取引を専門家へ相談している</li>
+          </ul>
+        </div>
+
+        <h2>6. まとめ</h2>
+        <div class="summary-box">
+          <h3>誤適用を防ぐために</h3>
+          <p>VAT 8%と10%の判別では、税率だけでなく、商品・サービスの実態、契約内容、インボイスの記載を一貫して確認することが大切です。</p>
+          <ul>
+            <li>対象・除外品目を確認する</li>
+            <li>複合取引は内容を明確に区分する</li>
+            <li>e-Invoice発行前に税率を確認する</li>
+            <li>判断に迷う場合は早めに専門家へ相談する</li>
+          </ul>
+        </div>
+
+        <div class="footer-note">
+          <strong>EVEN A&Cからのお知らせ</strong>
+          税務申告、VATの税率判定、e-Invoiceの確認についてご不明な点があれば、日本人担当者が日本語でご説明します。資料請求・お問い合わせは下記よりご連絡ください。
+          <br><br>📞 078-345-0101
+        </div>
+
+        <div class="disclaimer" data-disclaimer>
+          <strong>免責事項</strong>
+          <span data-disclaimer-text>免責事項を読み込んでいます。</span>
+        </div>
+      </div>
+    </article>
+
+    <article id="article-zh" class="article-content" data-lang="zh">
+      <div class="article-shell">
+        <header class="article-header">
+          <h1>增值稅（VAT）8% 與 10% 判別實務</h1>
+          <div class="article-meta">發佈日期：2026年8月21日</div>
+          <div class="category-links" aria-label="分類">
+            <a href="blog.html">稅務・會計</a>
+            <a href="blog.html">增值稅 VAT</a>
+            <a href="blog.html">電子發票</a>
+          </div>
+        </header>
+
+        <figure class="featured-image">
+          <img src="VAT判別実務.png" alt="VAT 8%與10%判別實務的插圖" loading="lazy">
+          <figcaption>VAT稅率判斷與電子發票管理的重點</figcaption>
+        </figure>
+
+        <div class="highlight">
+          <strong>本文章的重點</strong>
+          <p>在越南，並非所有商品與服務都適用8%的增值稅。正確確認適用範圍與排除項目，可避免電子發票開立錯誤，以及進項增值稅扣抵遭否認的風險。</p>
+        </div>
+
+        <h2>1. VAT 8% 減免稅率的基本概念</h2>
+        <p>越南為了刺激消費，針對部分原本適用10%標準稅率的商品與服務，可能適用8%的減免稅率。</p>
+        <p>但是，減免稅率並不是全面適用。必須根據適用期間的法令、事業內容、商品分類及實際交易內容進行確認。</p>
+
+        <div class="key-point">
+          <strong>重要觀念</strong><br>
+          是否可以適用VAT 8%，應根據商品或服務的實際內容與法令上的分類判斷，而不是僅依交易對象的認知決定。
+        </div>
+
+        <h2>2. 主要維持10%的領域</h2>
+        <p>以下領域可能屬於減免稅率的排除對象，仍適用10%：</p>
+        <div class="checklist">
+          <ul>
+            <li>不動產事業</li>
+            <li>金融、銀行、證券及保險相關服務</li>
+            <li>電信及部分資訊技術服務</li>
+            <li>金屬製品及礦業相關商品・服務</li>
+            <li>酒類、香菸、乘用小客車等特別消費稅課稅商品</li>
+          </ul>
+        </div>
+        <p>實際適用稅率時，請將當期法令與貴公司的具體交易內容進行對照確認。</p>
+
+        <h2>3. 實務上容易混淆的案例</h2>
+        <h3>複合式服務的處理</h3>
+        <p>同一份合約同時包含設備銷售、系統調整、保養或檢驗等多項內容時，應特別注意。</p>
+        <p>若8%適用商品與10%適用服務沒有在合約及電子發票上清楚區分，整體交易可能面臨適用10%的風險。</p>
+
+        <h3>商品分類・HS Code的確認</h3>
+        <p>商品稅率不應只根據商品名稱判斷，還需要確認商品實體、商品分類及HS Code。即使公司內部判定為8%，稅務調查時仍可能被重新認定為10%。</p>
+
+        <div class="illustration">
+          <div class="illustration-icon">📋</div>
+          <p class="illustration-caption">請按每筆交易保存稅率判斷的依據及相關文件。</p>
+        </div>
+
+        <h2>4. 開立電子發票時的注意事項</h2>
+        <h3>按稅率清楚區分</h3>
+        <p>同時處理8%與10%的項目時，應按照稅率清楚列示品項、數量、單價、稅率及稅額。</p>
+        <h3>稅率開立錯誤時</h3>
+        <p>若電子發票開立了錯誤稅率，應與交易對象合作，依規定及時辦理作廢、取消或開立修正發票等手續。</p>
+
+        <div class="warning">
+          <strong>⚠️ 對進項稅額的影響</strong><br>
+          稅率適用錯誤可能影響進項增值稅扣抵或退稅。開立前確認及開立後定期核對非常重要。
+        </div>
+
+        <h2>5. 企業實務檢查清單</h2>
+        <div class="checklist">
+          <ul>
+            <li>按稅率整理公司商品與服務清單</li>
+            <li>確認適用VAT 8%的法令與分類依據</li>
+            <li>在合約中清楚區分8%與10%的交易內容</li>
+            <li>開立前確認電子發票的稅率、稅額與總額</li>
+            <li>定期比對已開立發票與會計帳簿</li>
+            <li>對難以判斷的交易及早諮詢專業人士</li>
+          </ul>
+        </div>
+
+        <h2>6. 總結</h2>
+        <div class="summary-box">
+          <h3>避免適用錯誤的方法</h3>
+          <p>判斷VAT 8%與10%時，應一致確認商品・服務實體、合約內容與電子發票記載。</p>
+          <ul>
+            <li>確認適用範圍及排除項目</li>
+            <li>清楚區分複合式交易內容</li>
+            <li>開立電子發票前確認稅率</li>
+            <li>有疑問時及早諮詢專業人士</li>
+          </ul>
+        </div>
+
+        <div class="footer-note">
+          <strong>EVEN A&C通知</strong>
+          如對稅務申報、VAT稅率判斷或電子發票有疑問，日本人擔當者可以用日文提供說明。歡迎透過下方方式索取資料或聯絡我們。
+          <br><br>📞 078-345-0101
+        </div>
+
+        <div class="disclaimer" data-disclaimer>
+          <strong>免責事項</strong>
+          <span data-disclaimer-text>免責事項を読み込んでいます。</span>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>EVEN A&C</h4>
+        <a href="index.html#services" data-ja="税務申告サポート" data-zh="稅務申報支援">税務申告サポート</a>
+        <a href="index.html#services" data-ja="出国停止解除サポート" data-zh="解除出國禁止支援">出国停止解除サポート</a>
+        <a href="index.html#services" data-ja="会計・財務コンサル" data-zh="會計・財務顧問">会計・財務コンサル</a>
+      </div>
+      <div class="footer-section">
+        <h4 data-ja="情報" data-zh="資訊">情報</h4>
+        <a href="blog.html" data-ja="ブログ" data-zh="部落格">ブログ</a>
+        <a href="https://www.threads.com/@even_anc.hcmc" target="_blank" rel="noopener">Threads</a>
+        <a href="index.html#contact" data-ja="お問い合わせ" data-zh="聯絡我們">お問い合わせ</a>
+      </div>
+      <div class="footer-section">
+        <h4 data-ja="会社情報" data-zh="公司資訊">会社情報</h4>
+        <a href="index.html#company-info" data-ja="住所・営業時間" data-zh="地址・營業時間">住所・営業時間</a>
+        <a href="https://evenanc-p57c5c2.gamma.site/" target="_blank" rel="noopener" data-ja="会社概要" data-zh="公司概要">会社概要</a>
+        <a href="disclaimer.html" data-ja="免責事項" data-zh="免責事項">免責事項</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 EVEN A&C. All rights reserved.</div>
+  </footer>
+
+  <script>
+    let currentLanguage = "ja";
+
+    function updateLanguage() {
+      document.querySelectorAll("[data-ja][data-zh]").forEach((element) => {
+        element.textContent = element.getAttribute("data-" + currentLanguage);
+      });
+      document.querySelectorAll(".article-content").forEach((article) => {
+        article.classList.toggle("active", article.dataset.lang === currentLanguage);
+      });
+      document.documentElement.lang = currentLanguage === "ja" ? "ja" : "zh-Hant";
+      document.title = currentLanguage === "ja"
+        ? "VAT 8%と10%の判別実務 | EVEN A&C"
+        : "增值稅（VAT）8% 與 10% 判別實務 | EVEN A&C";
+      document.getElementById("lang-button").textContent =
+        currentLanguage === "ja" ? "華語" : "日本語";
+    }
+
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === "ja" ? "zh" : "ja";
+      updateLanguage();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    let disclaimerData = null;
+
+    async function loadDisclaimer() {
+      const elements = document.querySelectorAll("[data-disclaimer-text]");
+      try {
+        const response = await fetch("disclaimer.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("免責事項データの取得に失敗しました。");
+        disclaimerData = await response.json();
+        updateDisclaimer();
+      } catch (error) {
+        elements.forEach((element) => {
+          element.textContent = currentLanguage === "ja"
+            ? "法令や税制は予告なく変更される場合があります。また、個別事案は専門家の意見を必ずご確認ください。本記事の内容を用いたことによるいかなる損害に対しても一切の責任を負いかねます。"
+            : "本篇文章係參考撰寫當時之當地法規制度所作成，惟法令與稅制可能在未經預告之情況下有所變更。此外，針對個別具體案件之法律解釋與應對方式，請務必諮詢專業人士之意見。對於因使用本篇文章內容而造成之任何損害，本公司概不承擔任何責任。";
+        });
+      }
+    }
+
+    function updateDisclaimer() {
+      if (!disclaimerData) return;
+      document.querySelectorAll("[data-disclaimer-text]").forEach((element) => {
+        element.textContent = disclaimerData[currentLanguage] || "";
+      });
+    }
+
+    const originalUpdateLanguage = updateLanguage;
+    updateLanguage = function() {
+      originalUpdateLanguage();
+      updateDisclaimer();
+    };
+
+    updateLanguage();
+    loadDisclaimer();
+  </script>
+</body>
+</html>
