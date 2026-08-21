@@ -199,7 +199,7 @@
                 const ar = articlesData.articles.find(a => a.id === articleId);
                 const link = ar && ar[`external_link_${currentLanguage}`];
                 if (link) {
-                    window.open(link, '_blank');
+                    window.location.href = link;
                 } else {
                     const detail = card.querySelector('.blog-detail');
                     if (detail) detail.classList.add('active');
@@ -217,7 +217,7 @@
 
             // external_link がある場合は外部ファイルへ移動
             if (article && article[`external_link_${currentLanguage}`]) {
-                window.open(article[`external_link_${currentLanguage}`], '_blank');
+                window.location.href = article[`external_link_${currentLanguage}`];
                 return;
             }
 
