@@ -73,9 +73,17 @@
         <p data-ja="EVEN A&Cの最新情報とお役立ち情報" data-zh="EVEN A&C的最新信息和有用信息">EVEN A&Cの最新情報とお役立ち情報</p>
     </section>
 
+    <section class="latest-blog-section" aria-labelledby="latest-blog-title">
+        <div class="blog-container">
+            <h2 id="latest-blog-title" class="category-title" data-ja="最新ブログ記事" data-zh="最新部落格文章">最新ブログ記事</h2>
+            <div class="blog-grid" id="latest-blog-grid"></div>
+        </div>
+    </section>
+
     <div class="blog-container" id="blog-content">
         <!-- ブログ記事は JavaScript で動的に生成されます -->
     </div>
+
 
     <footer>
         <div class="footer-content">
@@ -122,6 +130,17 @@
         function renderBlog() {
             const blogContent = document.getElementById('blog-content');
             blogContent.innerHTML = '';
+
+            const latestArticles = [...articlesData.articles]
+                .sort((a, b) => new Date(b.date) - new Date(a.date))
+                .slice(0, 3);
+            const latestGrid = document.getElementById('latest-blog-grid');
+            if (latestGrid) {
+                latestGrid.innerHTML = '';
+                latestArticles.forEach(article => latestGrid.appendChild(createBlogCard(article)));
+            }
+
+
 
             // 記事を日付の新しい順でソート
             const sortedArticles = [...articlesData.articles].sort((a, b) => {

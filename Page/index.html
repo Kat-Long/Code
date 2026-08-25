@@ -282,7 +282,8 @@
             const excerptKey = currentLanguage === 'ja' ? 'excerpt_ja' : 'excerpt_zh';
             const readMore = currentLanguage === 'ja' ? '続きを読む →' : '繼續閱讀 →';
             const sortedArticles = [...articlesData.articles]
-                .sort((a, b) => new Date(b.date) - new Date(a.date));
+                .sort((a, b) => new Date(b.date) - new Date(a.date))
+                .slice(0, 3);
 
             grid.innerHTML = sortedArticles.map(article => {
                 const link = article[`external_link_${currentLanguage}`];
