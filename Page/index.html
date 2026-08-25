@@ -95,7 +95,7 @@
                 <a href="#services" onclick="smoothScroll(event)" data-ja="サービス" data-zh="服務">サービス</a>
                 <a href="blog.html" data-ja="ブログ" data-zh="部落格">ブログ</a>
                 <a href="#contact" onclick="smoothScroll(event)" data-ja="お問い合わせ" data-zh="聯絡我們">お問い合わせ</a>
-                 <button class="lang-switch" onclick="toggleLanguage()" data-ja="華語" data-zh="繁體中文">華語</button>
+                 <button type="button" class="lang-switch" onclick="toggleLanguage()" data-ja="華語" data-zh="繁體中文">華語</button>
             </nav>
         </div>
     </header>
@@ -260,6 +260,7 @@
     </footer>
 
     <script>
+        let currentLanguage = 'ja';
         let articlesData = [];
 
         async function loadHomeArticles() {
@@ -323,10 +324,11 @@
                 const text = el.getAttribute(`data-${currentLanguage}`);
                 if (text) el.textContent = text;
             });
+            document.documentElement.lang = currentLanguage === 'ja' ? 'ja' : 'zh-Hant';
         }
         function updateButtonText() {
             const btn = document.querySelector('.lang-switch');
-            btn.textContent = currentLanguage === 'ja' ? '華語' : '日本語';
+            if (btn) btn.textContent = currentLanguage === 'ja' ? '華語' : '日本語';
         }
         function smoothScroll(event) {
             event.preventDefault();

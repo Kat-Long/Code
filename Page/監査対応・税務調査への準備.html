@@ -476,7 +476,6 @@
 
     <script>
         let currentLanguage = "ja";
-        let disclaimerData = null;
 
         function updateLanguage() {
             document.querySelectorAll("[data-ja][data-zh]").forEach((element) => {
@@ -486,9 +485,8 @@
                 article.classList.toggle("active", article.dataset.lang === currentLanguage);
             });
             document.documentElement.lang = currentLanguage === "ja" ? "ja" : "zh-Hant";
-            document.getElementById("lang-btn-text").textContent =
-                currentLanguage === "ja" ? "華語" : "日本語";
-            updateDisclaimer();
+            const button = document.getElementById("lang-btn-text");
+            if (button) button.textContent = currentLanguage === "ja" ? "華語" : "日本語";
         }
 
         function toggleLanguage() {
@@ -497,32 +495,12 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
 
-        function updateDisclaimer() {
-            if (!disclaimerData) return;
-            document.querySelectorAll("[data-disclaimer-text]").forEach((element) => {
-                element.textContent = disclaimerData[currentLanguage] || "";
-            });
-        }
-
-        async function loadDisclaimer() {
-            try {
-                const response = await fetch("disclaimer.json", { cache: "no-store" });
-                if (!response.ok) throw new Error("免責事項データの取得に失敗しました。");
-                disclaimerData = await response.json();
-                updateDisclaimer();
-            } catch (error) {
-                document.querySelectorAll("[data-disclaimer-text]").forEach((element) => {
-                    element.textContent = currentLanguage === "ja"
-                        ? "法令や税制は予告なく変更される場合があります。また、個別事案は専門家の意見を必ずご確認ください。本記事の内容を用いたことによるいかなる損害に対しても一切の責任を負いかねます。"
-                        : "本篇文章係參考撰寫當時之當地法規制度所作成，惟法令與稅制可能在未經預告之情況下有所變更。此外，針對個別具體案件之法律解釋與應對方式，請務必諮詢專業人士之意見。對於因使用本篇文章內容而造成之任何損害，本公司概不承擔任何責任。";
-                });
-            }
-        }
-
         updateLanguage();
-        loadDisclaimer();
+
     </script>
+    <script src="disclaimer.js"></script>
     <script src="latest-blog.js"></script>
+
 
 </body>
 </html>
