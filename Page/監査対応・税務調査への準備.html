@@ -90,6 +90,7 @@
         .article-content.active { display: block; }
         @media (max-width: 768px) { nav { display: none; } h1 { font-size: 1.8em; } }
     </style>
+    <link rel="stylesheet" href="latest-blog.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -465,6 +466,14 @@
         <div class="footer-bottom">© 2026 EVEN A&C. All rights reserved.</div>
     </footer>
 
+    <div class="latest-blog-section" aria-labelledby="latest-blog-title">
+        <div class="latest-blog-container">
+            <h2 id="latest-blog-title" class="latest-blog-title" data-ja="最新ブログ記事" data-zh="最新部落格文章">最新ブログ記事</h2>
+            <div class="latest-blog-grid"></div>
+        </div>
+    </div>
+
+
     <script>
         let currentLanguage = "ja";
         let disclaimerData = null;
@@ -513,5 +522,7 @@
         updateLanguage();
         loadDisclaimer();
     </script>
+    <script src="latest-blog.js"></script>
+
 </body>
 </html>

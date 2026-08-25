@@ -81,6 +81,7 @@
         .footer-section a { color: var(--white); text-decoration: none; display: block; margin-bottom: 0.5rem; }
         @media (max-width: 768px) { .hero h1 { font-size: 2rem; } nav { display: none; } .services-container, .strengths-container { grid-template-columns: 1fr; } .blog-grid { grid-template-columns: 1fr; } .contact-grid { grid-template-columns: 1fr; } }
     </style>
+    <link rel="stylesheet" href="latest-blog.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -177,7 +178,7 @@
     <section class="blog" id="blog">
         <div class="blog-container">
             <h2 class="section-title" data-ja="最新ブログ記事" data-zh="最新部落格文章">最新ブログ記事</h2>
-            <div class="blog-grid" id="home-blog-grid">
+            <div class="blog-grid latest-blog-grid">
                 <p data-ja="ブログ記事を読み込んでいます。" data-zh="正在載入部落格文章。">ブログ記事を読み込んでいます。</p>
             </div>
         </div>
@@ -205,7 +206,7 @@
                 <p data-ja="月～金 8:30～17:30" data-zh="週一至週五 8:30～17:30">月～金 8:30～17:30</p>
             </div>
             <div class="info-item">
-                <h3 data-ja="電話・Zalo" data-zh="電話・Zalo">電話・Zalo</h3>
+                <h3 data-ja="電話" data-zh="電話">電話</h3>
                 <p>078-345-0101</p>
             </div>
         </div>
@@ -259,7 +260,6 @@
     </footer>
 
     <script>
-        let currentLanguage = 'ja';
         let articlesData = [];
 
         async function loadHomeArticles() {
@@ -378,3 +378,6 @@
             }
         }
     </script>
+    <script src="latest-blog.js"></script>
+</body>
+</html>

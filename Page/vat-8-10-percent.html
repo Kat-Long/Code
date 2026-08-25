@@ -250,7 +250,8 @@
       .footer-content { text-align: center; }
     }
   </style>
-</head>
+  <link rel="stylesheet" href="latest-blog.css">
+
 <body>
   <header class="site-header">
     <div class="header-container">
@@ -481,6 +482,13 @@
     </article>
   </main>
 
+  <div class="latest-blog-section" aria-labelledby="latest-blog-title">
+    <div class="latest-blog-container">
+      <h2 id="latest-blog-title" class="latest-blog-title" data-ja="最新ブログ記事" data-zh="最新部落格文章">最新ブログ記事</h2>
+      <div class="latest-blog-grid"></div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-section">
@@ -563,5 +571,7 @@
     updateLanguage();
     loadDisclaimer();
   </script>
+<script src="latest-blog.js"></script>
+
 </body>
 </html>

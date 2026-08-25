@@ -50,6 +50,7 @@
         .footer-section a { color: var(--white); text-decoration: none; display: block; margin-bottom: 0.5rem; }
         @media (max-width: 768px) { .blog-hero h1 { font-size: 1.8rem; } nav { display: none; } .blog-grid { grid-template-columns: 1fr; } }
     </style>
+    <link rel="stylesheet" href="latest-blog.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -76,7 +77,7 @@
     <section class="latest-blog-section" aria-labelledby="latest-blog-title">
         <div class="blog-container">
             <h2 id="latest-blog-title" class="category-title" data-ja="最新ブログ記事" data-zh="最新部落格文章">最新ブログ記事</h2>
-            <div class="blog-grid" id="latest-blog-grid"></div>
+            <div class="blog-grid latest-blog-grid"></div>
         </div>
     </section>
 
@@ -284,6 +285,8 @@
         // ページ読み込み時に記事を読み込む
         window.addEventListener('DOMContentLoaded', loadArticles);
     </script>
+
+<script src="latest-blog.js"></script>
 
 </body>
 </html>
