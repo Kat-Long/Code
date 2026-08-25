@@ -48,7 +48,7 @@
         .blog { padding: 5rem 1rem; background: var(--white); }
         .blog-container { max-width: 1200px; margin: 0 auto; }
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .blog-card { background: var(--white); border-radius: 10px; overflow: hidden; border-top: 4px solid var(--accent); transition: transform 0.3s, box-shadow 0.3s; }
+        .blog-card { background: var(--white); border-radius: 10px; overflow: hidden; border-top: 4px solid var(--accent); cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
         .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .blog-card-image { width: 100%; height: 200px; object-fit: cover; display: block; }
         .blog-card-header { background: linear-gradient(135deg, var(--primary) 0%, #003d5c 100%); color: var(--white); padding: 1.5rem; }
@@ -289,7 +289,7 @@
                 const link = article[`external_link_${currentLanguage}`];
                 const destination = link || 'blog.html';
                 return `
-                    <div class="blog-card">
+                    <div class="blog-card" data-link="${destination}">
                         <img src="${article.image}" alt="${article[titleKey]}" class="blog-card-image">
                         <div class="blog-card-header">
                             <h3>${article[titleKey]}</h3>
@@ -302,6 +302,13 @@
                     </div>
                 `;
             }).join('');
+
+            grid.querySelectorAll('.blog-card[data-link]').forEach(card => {
+                card.addEventListener('click', event => {
+                    if (event.target.closest('.blog-read-more')) return;
+                    window.location.href = card.dataset.link;
+                });
+            });
         }
 
         function toggleLanguage() {
