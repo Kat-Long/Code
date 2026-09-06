@@ -14,7 +14,7 @@
         const remaining = articles
             .filter(article => !fixedIds.includes(Number(article.id)))
             .sort((a, b) => new Date(b.date) - new Date(a.date));
-        return [...fixed, ...remaining].slice(0, 3);
+        return [...fixed, ...remaining].slice(0, 6);
     }
 
     function renderLatestBlogs(articles) {
