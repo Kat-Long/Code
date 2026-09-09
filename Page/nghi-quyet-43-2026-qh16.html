@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ベトナム国会決議43/2026/QH16（2026年8月24日公布）により、年間売上100億ドン以下の個人・企業の2026年・2027年課税年度の所得税（PIT・CIT）納付税額が30%減額されます。適用対象・条件、除外規定、既存の税制優遇との関係を実務ポイントとして解説します。">
+  <title>国会決議43/2026/QH16：所得税30%減税の実務ポイント（2026〜2027年） | EVEN A&C</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WQJCCTCV');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #001F3F;
+      --primary-light: #003d66;
+      --accent: #FF6633;
+      --light-bg: #eee9e5;
+      --paper: #ffffff;
+      --page: #f9f9f9;
+      --text: #333333;
+      --muted: #666666;
+      --warning: #fff3cd;
+      --info: #f0f8ff;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--page);
+      color: var(--text);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, "Noto Sans JP", Meiryo, sans-serif;
+      line-height: 1.8;
+    }
+    a { color: var(--accent); }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--light-bg);
+      color: var(--primary);
+      padding: 1rem 0;
+      box-shadow: 0 1px 0 rgba(0, 31, 63, .08);
+    }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      color: var(--primary);
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .logo-image { width: auto; height: 48px; }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+    }
+    .site-nav a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+    .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--accent); }
+    .lang-switch {
+      border: 0;
+      border-radius: 5px;
+      padding: .55rem 1rem;
+      background: var(--accent);
+      color: #fff;
+      font: inherit;
+      cursor: pointer;
+    }
+    .article-shell {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 52px;
+      background: var(--paper);
+      min-height: calc(100vh - 100px);
+    }
+    .article-header {
+      border-bottom: 4px solid var(--accent);
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+    h1 {
+      color: var(--primary);
+      font-size: clamp(1.9rem, 4vw, 2.5rem);
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+    .article-meta {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .category-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: 12px;
+    }
+    .category-links a {
+      display: inline-block;
+      padding: .2rem .7rem;
+      border: 1px solid rgba(255, 102, 51, .45);
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: .85rem;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+    .category-links a:hover { background: var(--accent); color: #fff; }
+    .article-content { display: none; }
+    .article-content.active { display: block; }
+    .article-content p { margin: 0 0 1rem; }
+    .article-content ul, .article-content ol {
+      margin: .5rem 0 1.2rem 1.5rem;
+    }
+    .article-content li { margin: .45rem 0; }
+    h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      line-height: 1.4;
+      margin: 40px 0 20px;
+      padding-left: 15px;
+      border-left: 5px solid var(--accent);
+    }
+    h3 {
+      color: var(--accent);
+      font-size: 1.3rem;
+      line-height: 1.5;
+      margin: 25px 0 15px;
+    }
+    strong { color: var(--primary); }
+    em { color: var(--accent); font-style: normal; font-weight: 700; }
+    .highlight, .key-point, .checklist, .warning, .summary-box, .footer-note {
+      margin: 20px 0;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .highlight {
+      background: var(--light-bg);
+      border-left: 4px solid var(--accent);
+    }
+    .key-point {
+      background: #fff3e0;
+      border-left: 4px solid var(--accent);
+    }
+    .checklist { background: var(--info); }
+    .checklist ul { list-style: none; margin-left: 0; }
+    .checklist li { padding-left: 1.7rem; position: relative; }
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .warning {
+      background: var(--warning);
+      border-left: 4px solid var(--accent);
+    }
+    .summary-box {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: #fff;
+    }
+    .summary-box h3 { margin-top: 0; color: var(--accent); }
+    .summary-box strong { color: #fff; }
+    .featured-image {
+      margin: 0 0 32px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: var(--light-bg);
+      box-shadow: 0 10px 28px rgba(0, 31, 63, .12);
+    }
+    .featured-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: cover;
+    }
+    .featured-image figcaption {
+      padding: 10px 16px;
+      color: var(--muted);
+      font-size: .85rem;
+      text-align: center;
+    }
+    .illustration {
+      text-align: center;
+      margin: 30px 0;
+      padding: 22px;
+      background: var(--light-bg);
+      border-radius: 8px;
+    }
+    .illustration-icon { font-size: 3rem; color: var(--accent); line-height: 1; }
+    .illustration-caption { color: var(--muted); font-size: .9rem; margin-top: 10px; font-style: italic; }
+    .disclaimer {
+      margin-top: 40px;
+      padding: 18px 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .disclaimer strong { display: block; margin-bottom: 4px; }
+    .footer-note { background: var(--light-bg); color: var(--muted); font-size: .95rem; }
+    .footer-note strong { display: block; margin-bottom: 4px; }
+    .site-footer {
+      background: #000;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+    .footer-section h4 { color: var(--accent); margin-bottom: 1rem; }
+    .footer-section a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: .5rem;
+    }
+    .footer-section a:hover { color: var(--accent); }
+    .footer-bottom { font-size: .85rem; color: #aaa; }
+    @media (max-width: 768px) {
+      .header-container { flex-wrap: wrap; }
+      .site-nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: .6rem;
+        font-size: .9rem;
+      }
+      .logo-image { height: 42px; }
+      .article-shell { padding: 28px 16px 40px; }
+      h2 { font-size: 1.5rem; }
+      h3 { font-size: 1.15rem; }
+      .footer-content { text-align: center; }
+    }
+  </style>
+  <link rel="stylesheet" href="latest-blog.css">
+
+<body class="article-page">
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo" aria-label="EVEN A&C ホーム">
+        <img src="logo.png" alt="EVEN A&C" class="logo-image">
+        <span>EVEN A&C</span>
+      </a>
+      <nav class="site-nav" aria-label="サイトナビゲーション">
+        <a href="index.html#services"><span data-ja="サービス" data-zh="服務">サービス</span></a>
+        <a href="blog.html" aria-current="page"><span data-ja="ブログ" data-zh="部落格">ブログ</span></a>
+        <a href="index.html#contact"><span data-ja="お問い合わせ" data-zh="聯絡我們">お問い合わせ</span></a>
+        <button type="button" class="lang-switch" onclick="toggleLanguage()" aria-label="言語切替">
+          <span id="lang-button">華語</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article id="article-ja" class="article-content active" data-lang="ja">
+      <div class="article-shell">
+        <header class="article-header">
+          <h1>国会決議第43/2026/QH16号：所得税30%減税の実務ポイント（2026〜2027年）</h1>
+          <div class="article-meta">公開日：2026年9月4日</div>
+          <div class="category-links" aria-label="カテゴリー">
+            <a href="blog.html">税務・会計</a>
+            <a href="blog.html">法人税・所得税</a>
+            <a href="blog.html">減税・優遇</a>
+          </div>
+        </header>
+
+        <figure class="featured-image">
+          <img src="nghi-quyet-43-2026-qh16.svg" alt="決議第43/2026/QH16号による所得税30%減税のイメージ" loading="lazy">
+          <figcaption>年間売上100億ドン以下の個人・企業が対象（2026年・2027年課税年度）</figcaption>
+        </figure>
+
+        <div class="highlight">
+          <strong>この記事のポイント</strong>
+          <p>ベトナム国会は2026年8月24日、年間売上100億ドン以下の個人・企業を対象に、2026年・2027年課税年度の個人所得税（PIT）・法人所得税（CIT）の納付税額を30%減額する<strong>決議第43/2026/QH16号</strong>を可決・公布しました。本記事では、適用対象・条件、除外規定、既存の税制優遇との関係など、日系企業と個人事業主が押さえるべき実務ポイントを解説します。</p>
+        </div>
+
+        <h2>1. 決議第43/2026/QH16号の概要</h2>
+        <p>2026年8月24日、第16期国会の第1回臨時会議において、個人所得税（PIT）と法人所得税（CIT）の納付税額を減額する決議が可決され、同日付で国会議長が署名・公布しました。</p>
+        <div class="checklist">
+          <ul>
+            <li>決議番号：第43/2026/QH16号（第16期国会・第1回臨時会議で可決）</li>
+            <li>可決・公布日：2026年8月24日（同日発効）</li>
+            <li>適用期間：2026年課税年度および2027年課税年度</li>
+            <li>政策目的：消費喚起と、個人事業主・中小規模事業者への支援</li>
+          </ul>
+        </div>
+
+        <h2>2. 減税の内容：納付税額の30%減額</h2>
+        <h3>個人（個人事業主・hộ kinh doanh）</h3>
+        <p>居住者個人の<strong>事業所得</strong>に対する2026年・2027年課税年度のPIT納付税額について、当該年度の年間売上が100億ドン以下の個人を対象に、<em>30%の減額</em>が認められます。</p>
+        <div class="key-point">
+          <strong>対象は「事業所得」です</strong><br>
+          減税の対象となるのは事業から生じる所得であり、給与所得は本決議の対象外です。個人事業主（hộ kinh doanh・cá nhân kinh doanh）の事業収入に対する税負担が軽減されます。
+        </div>
+        <h3>企業・組織</h3>
+        <p>ベトナム法に基づき設立された企業・組織の所得に対する2026年・2027年課税年度のCIT納付税額について、当該年度の年間売上が100億ドン以下の企業を対象に、<em>30%の減額</em>が認められます。</p>
+        <h2>3. 適用対象と「年間売上100億ドン以下」の判定</h2>
+        <p>売上基準（100億ドン）は、<strong>各課税年度ごとの年間売上</strong>で判定します。2026年と2027年の両方で基準を満たせば、両年度とも減税の対象となります。</p>
+        <div class="checklist">
+          <ul>
+            <li>2026年課税年度の年間売上が100億ドン以下 → 2026年の納付税額が30%減額</li>
+            <li>2027年課税年度の年間売上が100億ドン以下 → 2027年の納付税額が30%減額</li>
+          </ul>
+        </div>
+        <p>なお、税務当局の見通しとして報じられた情報では、この売上基準により<strong>個人事業主・個人の約99.86%が受益</strong>する見込みと紹介されています。</p>
+        <div class="warning">
+          <strong>⚠️ 申告実務上の留意点</strong><br>
+          売上判定は年度の実績に基づくため、年度途中の暫定申告（tạm nộp）で減税をどのように反映するかは、税務当局の実施ガイダンス（通達・公電）をご確認ください。最新の公式情報をフォローし、確定申告での精算に備えてください。
+        </div>
+
+        <h2>4. 除外規定：分割・分離による新設企業への対策</h2>
+        <p>決議の発効日（2026年8月24日）<strong>以降</strong>に、企業の分割・分離によって新たに設立された企業で、<strong>分割後の企業の2026年・2027年の年間売上の合計が100億ドンを超える場合</strong>は、本減税の対象から除外されます。</p>
+        <p>これは、売上規模の大きな事業を分割することで減税要件を満たす行為を防ぐ趣旨の規定（アンチ・アボイダンス）です。グループ内再編や事業承継で会社分割を予定している場合は、本規定への影響を事前に検討してください。</p>
+
+        <h2>5. 既存の税制優遇との関係</h2>
+        <p>企業所得税法（第67/2025/QH15号）またはその他の法律・国会決議により税制優遇（優遇税率、免税・減税期間など）を受けている企業については、本決議による減税額は<strong>「優遇適用後の納付税額」を基礎</strong>として計算されます。</p>
+        <p>（計算イメージ）通常税率で計算した税額 10億ドン → 優遇税制適用後の納付税額 8億ドン → 本決議により30%減額（−2.4億ドン）→ <strong>最終的な納付税額 5.6億ドン</strong></p>
+        <div class="warning">
+          <strong>⚠️ 計算順序に注意</strong><br>
+          既存の優遇税制を適用した後の税額を基礎に本減税を計算するため、順序を誤ると申告額に過誤が生じます。自社の優遇適用状況を整理したうえで、申告内容を確認してください。
+        </div>
+
+        <h2>6. 日系企業向け 実務チェックリスト</h2>
+        <div class="checklist">
+          <ul>
+            <li>自社（および個人事業）の年間売上が100億ドン以下か、2026年・2027年それぞれ確認している</li>
+            <li>PIT減税は「事業所得」対象であり、給与所得は対象外である点を社内で共有している</li>
+            <li>優遇税率・免税期間など、既存のCIT優遇の適用状況を整理している</li>
+            <li>グループ内の分割・分離の計画があり、除外規定の影響を事前検討している</li>
+            <li>暫定申告での減税の反映方法など、税務当局の実施ガイダンスをフォローしている</li>
+            <li>判断に迷う事項は、早めに専門家へ相談している</li>
+          </ul>
+        </div>
+
+        <div class="illustration">
+          <div class="illustration-icon">💰</div>
+          <p class="illustration-caption">減税の適用可否は「対象年度・対象税目・売上基準・除外規定」の4点で確認しましょう。</p>
+        </div>
+
+        <h2>7. まとめ</h2>
+        <div class="summary-box">
+          <h3>減税を確実に活用するために</h3>
+          <p>決議第43/2026/QH16号は、2026年・2027年の2年間にわたり、年間売上100億ドン以下の個人・企業の所得税（PIT・CIT）納付税額を30%減額するものです。適用判断では、次の4点を押さえることが重要です。</p>
+          <ul>
+            <li>対象年度（2026年・2027年）と対象税目（PIT・CIT）を確認する</li>
+            <li>年度ごとの年間売上100億ドンの判定を行う</li>
+            <li>分割・分離による除外規定に注意する</li>
+            <li>既存優遇は「適用後の税額」ベースで本減税を計算する</li>
+          </ul>
+        </div>
+
+        <div class="footer-note">
+          <strong>EVEN A&Cからのお知らせ</strong>
+          決議第43/2026/QH16号の適用判断、申告実務への反映、他の税制優遇との併用についてご不明な点があれば、日本人担当者が日本語でご説明します。資料請求・お問い合わせは下記よりご連絡ください。
+          <br><br>📞 078-345-0101
+        </div>
+
+        <div class="disclaimer" data-disclaimer>
+          <strong>免責事項</strong>
+          <span data-disclaimer-text>免責事項を読み込んでいます。</span>
+        </div>
+      </div>
+    </article>
+    <article id="article-zh" class="article-content" data-lang="zh">
+      <div class="article-shell">
+        <header class="article-header">
+          <h1>國會決議第43/2026/QH16號：所得稅減稅30%的實務要點（2026〜2027年）</h1>
+          <div class="article-meta">發佈日期：2026年9月4日</div>
+          <div class="category-links" aria-label="分類">
+            <a href="blog.html">稅務・會計</a>
+            <a href="blog.html">法人稅・所得稅</a>
+            <a href="blog.html">減稅・優惠</a>
+          </div>
+        </header>
+
+        <figure class="featured-image">
+          <img src="nghi-quyet-43-2026-qh16.svg" alt="決議第43/2026/QH16號所得稅減稅30%的插圖" loading="lazy">
+          <figcaption>適用於年營收100億越南盾以下的個人與企業（2026年及2027年課稅年度）</figcaption>
+        </figure>
+
+        <div class="highlight">
+          <strong>本文章的重點</strong>
+          <p>越南國會於2026年8月24日可決並公布<strong>第43/2026/QH16號決議</strong>，對年營收不超過100億越南盾的個人與企業，減免2026年及2027年課稅年度個人所得稅（PIT）與法人所得稅（CIT）應納稅額的30%。本文將解說適用對象、條件、排除規定以及與現行租稅優惠的關係等實務要點。</p>
+        </div>
+
+        <h2>1. 決議第43/2026/QH16號的概要</h2>
+        <p>2026年8月24日，第十六屆國會第一次臨時會議可決了減免個人所得稅（PIT）與法人所得稅（CIT）應納稅額的決議，並由國會主席於同日簽署公布。</p>
+        <div class="checklist">
+          <ul>
+            <li>決議編號：第43/2026/QH16號（第十六屆國會・第一次臨時會議可決）</li>
+            <li>可決・公布日期：2026年8月24日（同日生效）</li>
+            <li>適用期間：2026年及2027年課稅年度</li>
+            <li>政策目的：刺激消費，支援個人事業主及中小規模經營者</li>
+          </ul>
+        </div>
+
+        <h2>2. 減稅內容：應納稅額減免30%</h2>
+        <h3>個人（個人事業主・家庭經營戶）</h3>
+        <p>對於居住者個人<strong>營業所得</strong>的2026年及2027年課稅年度PIT應納稅額，當年度年營收不超過100億越南盾的個人，可獲得<em>30%的減免</em>。</p>
+        <div class="key-point">
+          <strong>適用對象為「營業所得」</strong><br>
+          本次減稅針對事業所產生的所得，薪資所得不在適用範圍內。個人事業主（hộ kinh doanh・cá nhân kinh doanh）事業收入的稅負將獲得減輕。
+        </div>
+        <h3>企業與組織</h3>
+        <p>對於依越南法律設立之企業與組織的所得，2026年及2027年課稅年度的CIT應納稅額，當年度年營收不超過100億越南盾的企業，可獲得<em>30%的減免</em>。</p>
+        <h2>3. 適用對象與「年營收100億盾以下」的判定</h2>
+        <p>營收標準（100億盾）以<strong>各課稅年度的年營收</strong>判定。若2026年與2027年皆符合標準，兩個年度均可適用減稅。</p>
+        <div class="checklist">
+          <ul>
+            <li>2026年課稅年度年營收未超過100億盾 → 2026年應納稅額減免30%</li>
+            <li>2027年課稅年度年營收未超過100億盾 → 2027年應納稅額減免30%</li>
+          </ul>
+        </div>
+        <p>根據稅務機關的預測報導，在此營收標準下，<strong>約99.86%的個人事業主及個人將可受益</strong>。</p>
+        <div class="warning">
+          <strong>⚠️ 申報實務上的注意事項</strong><br>
+          營收判定以年度實績為基準，年度中的暫繳（tạm nộp）應如何反映減稅，須依稅務機關的施行指引（通函、公文）確認。請持續關注最新官方資訊，並為年度結算申報的清算做好準備。
+        </div>
+
+        <h2>4. 排除規定：防止透過分割、分立規避</h2>
+        <p>對於在決議生效日（2026年8月24日）<strong>之後</strong>，因企業分割、分立而新設立的企業，若<strong>分割後企業在2026年及2027年的年營收合計超過100億盾</strong>，將被排除於本次減稅的適用範圍。</p>
+        <p>此規定的目的在於防止藉由分割大規模事業以符合減稅要件的反避稅安排。若集團內部重組或事業承繼計畫中包含公司分割，請事先評估本規定的影響。</p>
+
+        <h2>5. 與現行租稅優惠的關係</h2>
+        <p>對於依據《企業所得稅法》（第67/2025/QH15號）或其他法律、國會決議享有租稅優惠（優惠稅率、免稅・減稅期間等）的企業，本決議的減稅額以<strong>「適用優惠後的應納稅額」</strong>為基礎計算。</p>
+        <p>（計算示例）按一般稅率計算的稅額 10億盾 → 適用優惠稅制後的應納稅額 8億盾 → 依本決議減免30%（−2.4億盾）→ <strong>最終應納稅額 5.6億盾</strong></p>
+        <div class="warning">
+          <strong>⚠️ 注意計算順序</strong><br>
+          須先適用現行租稅優惠，再以優惠後的稅額計算本次減免；順序錯誤將導致申報金額錯誤。請先整理貴公司優惠的適用狀況，再確認申報內容。
+        </div>
+
+        <h2>6. 日系企業的實務檢查清單</h2>
+        <div class="checklist">
+          <ul>
+            <li>已分別確認2026年、2027年貴公司（及個人事業）的年營收是否在100億盾以下</li>
+            <li>已在內部共享「PIT減稅僅適用營業所得，薪資所得除外」的要點</li>
+            <li>已整理優惠稅率、免稅期間等現行CIT優惠的適用狀況</li>
+            <li>已事先評估集團內分割、分立計畫受排除規定的影響</li>
+            <li>已持續關注稅務機關施行指引（暫繳時的減稅處理方式等）</li>
+            <li>對有疑義的事項，及早諮詢專業人士</li>
+          </ul>
+        </div>
+
+        <div class="illustration">
+          <div class="illustration-icon">💰</div>
+          <p class="illustration-caption">減稅的適用判斷，應從「適用年度・適用稅目・營收標準・排除規定」四個方面確認。</p>
+        </div>
+
+        <h2>7. 總結</h2>
+        <div class="summary-box">
+          <h3>確實運用減稅優惠</h3>
+          <p>第43/2026/QH16號決議在2026年、2027年兩個課稅年度，對年營收不超過100億盾的個人與企業，減免所得稅（PIT・CIT）應納稅額的30%。判斷是否適用時，務必掌握下列四個重點。</p>
+          <ul>
+            <li>確認適用年度（2026年・2027年）與適用稅目（PIT・CIT）</li>
+            <li>逐年度進行年營收100億盾的判定</li>
+            <li>注意企業分割、分立的排除規定</li>
+            <li>以「適用優惠後的稅額」為基礎計算本次減免</li>
+          </ul>
+        </div>
+
+        <div class="footer-note">
+          <strong>EVEN A&C通知</strong>
+          如對第43/2026/QH16號決議的適用判斷、申報實務，或與其他租稅優惠的併用有疑問，日本人擔當者可以用日文提供說明。歡迎透過下方方式索取資料或聯絡我們。
+          <br><br>📞 078-345-0101
+        </div>
+
+        <div class="disclaimer" data-disclaimer>
+          <strong>免責事項</strong>
+          <span data-disclaimer-text>免責事項を読み込んでいます。</span>
+        </div>
+      </div>
+    </article>
+  </main>
+  <div class="latest-blog-section" aria-labelledby="latest-blog-title">
+    <div class="latest-blog-container">
+      <h2 id="latest-blog-title" class="latest-blog-title" data-ja="最新ブログ記事" data-zh="最新部落格文章">最新ブログ記事</h2>
+      <div class="latest-blog-grid"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>EVEN A&C</h4>
+        <a href="index.html#services" data-ja="税務申告サポート" data-zh="稅務申報支援">税務申告サポート</a>
+        <a href="index.html#services" data-ja="出国停止解除サポート" data-zh="解除出國禁止支援">出国停止解除サポート</a>
+        <a href="index.html#services" data-ja="会計・財務コンサル" data-zh="會計・財務顧問">会計・財務コンサル</a>
+      </div>
+      <div class="footer-section">
+        <h4 data-ja="情報" data-zh="資訊">情報</h4>
+        <a href="blog.html" data-ja="ブログ" data-zh="部落格">ブログ</a>
+        <a href="https://www.threads.com/@even_anc.hcmc" target="_blank" rel="noopener">Threads</a>
+        <a href="index.html#contact" data-ja="お問い合わせ" data-zh="聯絡我們">お問い合わせ</a>
+      </div>
+      <div class="footer-section">
+        <h4 data-ja="会社情報" data-zh="公司資訊">会社情報</h4>
+        <a href="index.html#company-info" data-ja="住所・営業時間" data-zh="地址・營業時間">住所・営業時間</a>
+        <a href="https://evenanc-p57c5c2.gamma.site/" target="_blank" rel="noopener" data-ja="会社概要" data-zh="公司概要">会社概要</a>
+        <a href="disclaimer.html" data-ja="免責事項" data-zh="免責事項">免責事項</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 EVEN A&C. All rights reserved.</div>
+  </footer>
+
+  <script>
+    let currentLanguage = "ja";
+    try { if (localStorage.getItem("site-lang") === "zh") currentLanguage = "zh"; } catch (e) {}
+
+    function updateLanguage() {
+      document.querySelectorAll("[data-ja][data-zh]").forEach((element) => {
+        element.textContent = element.getAttribute("data-" + currentLanguage);
+      });
+      document.querySelectorAll(".article-content").forEach((article) => {
+        article.classList.toggle("active", article.dataset.lang === currentLanguage);
+      });
+      document.documentElement.lang = currentLanguage === "ja" ? "ja" : "zh-Hant";
+      document.title = currentLanguage === "ja"
+        ? "国会決議43/2026/QH16：所得税30%減税の実務ポイント（2026〜2027年） | EVEN A&C"
+        : "國會決議43/2026/QH16：所得稅減稅30%的實務要點（2026〜2027年） | EVEN A&C";
+      document.getElementById("lang-button").textContent =
+        currentLanguage === "ja" ? "華語" : "日本語";
+    }
+
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === "ja" ? "zh" : "ja";
+      try { localStorage.setItem("site-lang", currentLanguage); } catch (e) {}
+      updateLanguage();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    updateLanguage();
+  </script>
+
+<script src="disclaimer.js"></script>
+<script src="latest-blog.js"></script>
+
+</body>
+</html>
