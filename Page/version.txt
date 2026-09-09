@@ -1,0 +1,4 @@
+deployed-commit-check
+commit: (will be filled by CI marker below)
+built-from: Page/version.txt
+purpose: Vercelデプロイ対象コミットの確認用マーカー
