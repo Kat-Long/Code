@@ -132,7 +132,7 @@
         <h2 class="section-title" style="color: var(--white);" data-ja="当社の強み" data-zh="我們的優勢">当社の強み</h2>
         <div class="strengths-container">
             <div class="strength-item">
-                <h3 data-ja="日本人担当者" data-zh="日本人員工">日本人担当者</h3>
+                <h3 data-ja="日本人担当者" data-zh="日系品質">日本人担当者</h3>
                 <p data-ja="日本語での丁寧な説明が可能です。" data-zh="能夠用繁體中文進行詳細說明。">日本語での丁寧な説明が可能です。</p>
             </div>
             <div class="strength-item">
@@ -317,12 +317,15 @@
 
     <script>
         let currentLanguage = 'ja';
+        try { if (localStorage.getItem('site-lang') === 'zh') currentLanguage = 'zh'; } catch (e) {}
         function toggleLanguage() {
             currentLanguage = currentLanguage === 'ja' ? 'zh' : 'ja';
+            try { localStorage.setItem('site-lang', currentLanguage); } catch (e) {}
             updateLanguage();
             updateButtonText();
         }
         function updateLanguage() {
+            document.documentElement.lang = currentLanguage === 'ja' ? 'ja' : 'zh-Hant';
             const elements = document.querySelectorAll('[data-ja][data-zh]');
             elements.forEach(el => {
                 const text = el.getAttribute(`data-${currentLanguage}`);
@@ -380,4 +383,6 @@
                 console.error('Error:', error);
             }
         }
+        updateLanguage();
+        updateButtonText();
     </script>

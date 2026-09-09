@@ -1,6 +1,3 @@
-cheapname_credentials.json
-node_modules/
-.env
-.env.local
-.DS_Store
-*.log
+/*
+!/.gitignore
+!/Page/

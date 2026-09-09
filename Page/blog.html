@@ -105,6 +105,7 @@
 
     <script>
         let currentLanguage = 'ja';
+        try { if (localStorage.getItem('site-lang') === 'zh') currentLanguage = 'zh'; } catch (e) {}
         let articlesData = [];
 
         // 記事データを読み込む
@@ -206,12 +207,14 @@
         // 言語切り替え
         function toggleLanguage() {
             currentLanguage = currentLanguage === 'ja' ? 'zh' : 'ja';
+            try { localStorage.setItem('site-lang', currentLanguage); } catch (e) {}
             updateLanguage();
             updateButtonText();
             renderBlog();
         }
 
         function updateLanguage() {
+            document.documentElement.lang = currentLanguage === 'ja' ? 'ja' : 'zh-Hant';
             const elements = document.querySelectorAll('[data-ja][data-zh]');
             elements.forEach(el => {
                 const text = el.getAttribute(`data-${currentLanguage}`);
@@ -226,6 +229,7 @@
 
         // ページ読み込み時に記事を読み込む
         window.addEventListener('DOMContentLoaded', loadArticles);
+        if (currentLanguage === 'zh') { updateLanguage(); updateButtonText(); }
     </script>
 
 </body>
