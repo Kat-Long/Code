@@ -50,6 +50,7 @@
         .footer-section a { color: var(--white); text-decoration: none; display: block; margin-bottom: 0.5rem; }
         @media (max-width: 768px) { .blog-hero h1 { font-size: 1.8rem; } nav { display: none; } .blog-grid { grid-template-columns: 1fr; } }
     </style>
+    <link rel="stylesheet" href="latest-blog.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -73,9 +74,17 @@
         <p data-ja="EVEN A&Cの最新情報とお役立ち情報" data-zh="EVEN A&C的最新信息和有用信息">EVEN A&Cの最新情報とお役立ち情報</p>
     </section>
 
+    <section class="latest-blog-section" aria-labelledby="latest-blog-title">
+        <div class="blog-container">
+            <h2 id="latest-blog-title" class="category-title" data-ja="最新ブログ記事" data-zh="最新部落格文章">最新ブログ記事</h2>
+            <div class="blog-grid latest-blog-grid"></div>
+        </div>
+    </section>
+
     <div class="blog-container" id="blog-content">
         <!-- ブログ記事は JavaScript で動的に生成されます -->
     </div>
+
 
     <footer>
         <div class="footer-content">
@@ -105,7 +114,7 @@
 
     <script>
         let currentLanguage = 'ja';
-        try { if (localStorage.getItem('site-lang') === 'zh') currentLanguage = 'zh'; } catch (e) {}
+try { if (localStorage.getItem('site-lang') === 'zh') currentLanguage = 'zh'; } catch (e) {}
         let articlesData = [];
 
         // 記事データを読み込む
@@ -124,9 +133,25 @@
             const blogContent = document.getElementById('blog-content');
             blogContent.innerHTML = '';
 
+            const latestArticles = [...articlesData.articles]
+                .sort((a, b) => new Date(b.date) - new Date(a.date))
+                .slice(0, 3);
+            const latestGrid = document.getElementById('latest-blog-grid');
+            if (latestGrid) {
+                latestGrid.innerHTML = '';
+                latestArticles.forEach(article => latestGrid.appendChild(createBlogCard(article)));
+            }
+
+
+
+            // 記事を日付の新しい順でソート
+            const sortedArticles = [...articlesData.articles].sort((a, b) => {
+                return new Date(b.date) - new Date(a.date);
+            });
+
             // カテゴリーごとにグループ化
             const categories = {};
-            articlesData.articles.forEach(article => {
+            sortedArticles.forEach(article => {
                 const categoryKey = currentLanguage === 'ja' ? article.category_ja : article.category_zh;
                 if (!categories[categoryKey]) {
                     categories[categoryKey] = [];
@@ -135,7 +160,15 @@
             });
 
             // カテゴリーごとにセクションを作成
-            Object.keys(categories).forEach(category => {
+            // 「その他／其他」は常に一覧の最下部に表示する
+            const categoryOrder = Object.keys(categories).sort((a, b) => {
+                const isOtherA = a === '【その他】' || a === '【其他】';
+                const isOtherB = b === '【その他】' || b === '【其他】';
+                if (isOtherA !== isOtherB) return isOtherA ? 1 : -1;
+                return 0;
+            });
+
+            categoryOrder.forEach(category => {
                 const section = document.createElement('div');
                 section.className = 'category-section';
 
@@ -161,6 +194,7 @@
         function createBlogCard(article) {
             const card = document.createElement('div');
             card.className = 'blog-card';
+            card.dataset.articleId = article.id;
 
             const titleKey = currentLanguage === 'ja' ? 'title_ja' : 'title_zh';
             const catchcopyKey = currentLanguage === 'ja' ? 'catchcopy_ja' : 'catchcopy_zh';
@@ -186,6 +220,20 @@
             `;
 
             card.innerHTML = html;
+            // クリックイベント：カード全体をクリック可能に
+            card.addEventListener('click', function(ev) {
+                // クリックが内部のリンク/閉じるボタンから発生している場合は何もしない
+                if (ev.target.closest('.blog-read-more') || ev.target.closest('.close-detail')) return;
+                const articleId = parseInt(card.dataset.articleId, 10);
+                const ar = articlesData.articles.find(a => a.id === articleId);
+                const link = ar && ar[`external_link_${currentLanguage}`];
+                if (link) {
+                    window.location.href = link;
+                } else {
+                    const detail = card.querySelector('.blog-detail');
+                    if (detail) detail.classList.add('active');
+                }
+            });
             return card;
         }
 
@@ -193,6 +241,16 @@
         function toggleDetail(event) {
             event.preventDefault();
             const card = event.target.closest('.blog-card');
+            const articleId = parseInt(card.dataset.articleId);
+            const article = articlesData.articles.find(a => a.id === articleId);
+
+            // external_link がある場合は外部ファイルへ移動
+            if (article && article[`external_link_${currentLanguage}`]) {
+                window.location.href = article[`external_link_${currentLanguage}`];
+                return;
+            }
+
+            // external_link がない場合はカード内展開
             const detail = card.querySelector('.blog-detail');
             detail.classList.add('active');
         }
@@ -206,15 +264,13 @@
 
         // 言語切り替え
         function toggleLanguage() {
-            currentLanguage = currentLanguage === 'ja' ? 'zh' : 'ja';
-            try { localStorage.setItem('site-lang', currentLanguage); } catch (e) {}
+            currentLanguage = currentLanguage === 'ja' ? 'zh' : 'ja';  try { localStorage.setItem('site-lang', currentLanguage); } catch (e) {}
             updateLanguage();
             updateButtonText();
             renderBlog();
         }
 
         function updateLanguage() {
-            document.documentElement.lang = currentLanguage === 'ja' ? 'ja' : 'zh-Hant';
             const elements = document.querySelectorAll('[data-ja][data-zh]');
             elements.forEach(el => {
                 const text = el.getAttribute(`data-${currentLanguage}`);
@@ -229,8 +285,9 @@
 
         // ページ読み込み時に記事を読み込む
         window.addEventListener('DOMContentLoaded', loadArticles);
-        if (currentLanguage === 'zh') { updateLanguage(); updateButtonText(); }
     </script>
+
+<script src="latest-blog.js"></script>
 
 </body>
 </html>
