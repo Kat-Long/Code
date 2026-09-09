@@ -1,0 +1,6 @@
+company=ファクトリンクマーケットプレイス有限会社
+profile_url=https://www.fact-link.com.vn/mem_profile.php?id=00051428&page=00005096&lang=jp
+address_len=3
+email_len=21
+address_prefix=会社名
+email_prefix=info@fact-link.com.vn

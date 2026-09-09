@@ -1,0 +1,207 @@
+ホーチミン企業リストの抽出を開始します...
+(最大 2 ページ = 60 件)
+
+検索ページ取得中: start=0
+  → 30 件取得
+検索ページ取得中: start=30
+  → 2 件取得
+
+合計 32 件の企業情報を取得しました
+既存ファイルを削除しました
+
+[完了] ファイルが作成されました: c:\Users\long\OneDrive\Code\Mail\ホーチミン企業リスト.xlsx
+[完了] 合計 32 社の情報を記録しました。
+
+=== 抽出結果 ===
+
+1. ファクトリンクマーケットプレイス有限会社
+   事業: 製造業ポータルサイト「ファクトリンク ベトナム」、工具通販「Fact-Depot」、工業用不動産紹介、ベトナムでの加工部品調達
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00051428&page=00005096&lang=jp
+
+2. ケーティーシー ベトナム 株式会社　KTC (VIETNAM)
+   事業: 精密ゴム成形、自動車用ゴム部品、オートバイ用ゴム部品、OAゴムローラ、携帯電話用ゴム部品、B練り製造
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00000116&page=00000189&lang=jp
+
+3. 永大化工ベトナム
+   事業: 合成樹脂異型押出成形加工の専門メーカー！自動車部品（フロアーマット）・プラスチック製品の製造
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00000201&page=00000276&lang=jp
+
+4. 株式会社　アキバコーティング ＆ テクノロジー ベトナム
+   事業: 金属表面処理めっき加工、絶縁専門電着塗装
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00000295&page=00000369&lang=jp
+
+5. SG 佐川ベトナム有限会社
+   事業: 国内・国際引越し・国内輸送事業、倉庫業、フォワーディング事業、通関業、貨物検定業
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00000823&page=00000958&lang=jp
+
+6. サトーベトナムソリューションズ
+   事業: ベトナムでRFID技術、バーコード、ラベル、アプリケーションソリューションのことならサトーベトナムソリューションズへ
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00000858&page=00001029&lang=jp
+
+7. オリスター株式会社
+   事業: ベトナムにおける非鉄金属業界のリーディングサプライヤー
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00001107&page=00001476&lang=jp
+
+8. 五十鈴テック ベトナム
+   事業: ＦＡテクノロジーの可能性に挑戦 ・自動化ニーズの最適化をめざして。各種産業用装置の企画（構想）～設計～製作～調整まで）
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00001221&page=00001715&lang=jp
+
+9. QUANG NGHI SERVICE AND TRADING-PRODUCT COMPANY LIMITED
+   事業: 乾燥剤（シリカゲル）、防湿パッケージの製造と販売。製品、工場、出荷などに対する効果的なカビ防止ソリューションのコンサルティングと提供
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00001975&page=00002693&lang=jp
+
+10. タイコー ベトナム
+   事業: 金属加工（板金、切削、鋳造、ロスト、ダイカスト、押出、線材加工、溶接、表面処理 等） 樹脂加工（射出成形、ゴム成形、ウレタン成形、ブロー・真空成形 等） アッセ
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00002045&page=00002769&lang=jp
+
+11. ジーケー・ファインケム ベトナム
+   事業: 化学品（試薬・高純度薬品・工業用基礎薬品・工業用溶剤）の輸入販売
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00002487&page=00003184&lang=jp
+
+12. クイックベトナム
+   事業: 御社のベトナム事業を採用・人事部門からサポート。設立15年目。製造業での日本人紹介実績トップクラス。ベトナム人の日本語堪能者や管理職紹介も積極的に対応しています
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00051537&page=00005139&lang=jp
+
+13. ツバサ ペイント
+   事業: 製造業向け溶剤塗料をベトナム国内で生産する塗料メーカーです。工業分野（金属・プラスチック）、建築分野（鉄骨・床）
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00051625&page=00005185&lang=jp
+
+14. 東京鋲兼（ベトナム）
+   事業: ネジ・締結部品、合成樹脂製品、スプリング部品、バネ部品の製造販売・輸入加工販売
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00001100&page=00001470&lang=jp
+
+15. Hamasho Corporation (Vietnam) Ltd.
+   事業: YAMAHAロボット、Dobotロボットのベトナム正規代理店。自動化のトータルソリューションはお任せください。
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00056351&page=00006357&lang=jp
+
+16. 西東京ケミックスベトナム
+   事業: 化学品専門商社。ベトナムに危険物保管可能な保税物倉庫を保有。
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00056417&page=00006401&lang=jp
+
+17. カイメタル アジア
+   事業: お客様にとって小回りの利く《精密板金加工メーカー》！　レーザー加工、精密板金、筐体設計、板金設計、粉体塗装、シルク印刷
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00000988&page=00001270&lang=jp
+
+18. TPR ベトナム
+   事業: エンジン部品、FA機器部品、電装部品、樹脂部品の製造。 ゴム製品加工、樹脂成形加工
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00000875&page=00001068&lang=jp
+
+19. 三位化学株式会社
+   事業: エンプラ成形（特にガラス繊維樹脂）、複合材料成形、小ロット成形、プラスチック製品・ゴム製品・鉄製品　何でも！ご相談ください 。
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00001055&page=00001402&lang=jp
+
+20. NBV (Vietnam) Co.,Ltd.
+   事業: 鉄、アルミ、ステンレス材の板金・プレス加工、溶接、パイプ加工および組立
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00001560&page=00002165&lang=jp
+
+21. エイチフィールド ベトナム
+   事業: 商品パッケージメーカー。軟包材の製造、及びパッケージデザイン企画から製造・販売。紙箱・ラベル・不織布バッグ・プラスチックケース・保冷剤等。
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00043527&page=00003734&lang=jp
+
+22. D.I.D ベトナム（大同工業グループ）
+   事業: バイク用・自動車用タイミングチェーン (カムチェーン)、バイク用ドライブローラチェーン、産業用ローラチェーン
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00056051&page=00006155&lang=jp
+
+23. ジャパン・プラス ベトナム
+   事業: プラスチック真空成型品の設計・製造・販売。包装資材、プラスチックトレイ、パッケージ、ブリスターパック、梱包資材、規格トレイ、オーダートレイ、フィルム緩衝材。PE
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00000925&page=00002040&lang=jp
+
+24. Tokoseiki ベトナム
+   事業: 顧客に共に歩み、金型設計から完成品まで最適化します。
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00054821&page=00005431&lang=jp
+
+25. SAIGON TRAPACO（サイゴン チャパコ）
+   事業: 軟包装資材の製造・販売（印刷、ラミネート加工、スリット、製袋） 、包装原材料の仕入販売
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00000006&page=00000002&lang=jp
+
+26. 北陸マシナリークラブ株式会社(HMC)
+   事業: アルミ溶解炉・保持炉・熱処理炉・加熱炉・乾燥機の製作・販売・修理、集塵機等の周辺機器設備の販売
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00050699&page=00004924&lang=jp
+
+27. キワ インダストリー
+   事業: 機械加工（マシニング、NCフライス、NC旋盤、ワイヤーカット、研磨、ギア）、設備設計製作（専用機製作、設計事業）メッキ（アルマイト処理、電解・無電解ニッケメッキ
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00000808&page=00000935&lang=jp
+
+28. マルセエンジニアリング（ベトナム）株式会社
+   事業: ベトナム国内でミウラのボイラの販売・メンテナンス・アフターサービスを提供致します。
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00051631&page=00005188&lang=jp
+
+29. JUKIベトナム（株）
+   事業: 精密鋳造（ロストワックス）・機械加工・熱処理・表面処理・組み立て・検査とモノづくりのワンストップ企業
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00051642&page=00005202&lang=jp
+
+30. シーベスト 株式会社
+   事業: 精密部品加工のエキスパート～医療機器部品、自動車部品、検査治工具
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00001018&page=00001323&lang=jp
+
+31. レーザーテクノロジー株式会社（LASER TECHNOLOGY.JSC）
+   事業: 精密板金加工とパイプ加工のスペシャリスト
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00056172&page=00006282&lang=jp
+
+32. YASHIMA NBV CO., Ltd.
+   事業: 鉄・ステンレス板の板金・製缶加工及び組み立て・塗装。プルボックス、ダクト、ラック、アルミ加工
+   住所: （未取得）
+   メール: （未取得）
+   URL: https://www.fact-link.com.vn/mem_profile.php?id=00054813&page=00005458&lang=jp
