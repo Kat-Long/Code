@@ -1,8 +1,0 @@
-company=ファクトリンクマーケットプレイス有限会社
-profile_url=https://www.fact-link.com.vn/mem_profile.php?id=00051428&page=00005096&lang=jp
-search_status=200
-search_len=103690
-profile_status=200
-profile_len=31328
-contains_refresh_meta=False
-contains_at_sign=True

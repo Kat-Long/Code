@@ -1,3 +1,10 @@
 /*
 !/.gitignore
 !/Page/
+
+# Page配下の一時ファイル・バックアップ（Page以外はGitに上げない）
+Page/_gitinfo.*
+Page/_gitpush.*
+Page/_commitmsg.txt
+Page/.git_backup/
+*(1).*
